@@ -20,34 +20,10 @@ const Header = () => {
   };
 
   const menuItems = [
-    {
-      title: 'Industries',
-      hasDropdown: true,
-      dropdownItems: [
-        { title: 'Insurances', link: '/insurances' },
-        { title: 'Financial Services', link: '/financial-services-2' },
-        { title: 'Home Services', link: '/home-services-2' },
-        { title: 'Legal', link: '/legal' },
-        { title: 'Travel', link: '/travel' },
-        { title: 'Real Estate', link: '/real-state' },
-      ]
-    },
-    { title: 'Technology', link: '/technology', hasDropdown: false },
-    { title: 'Advertiser', link: '/advertiser', hasDropdown: false },
-    { title: 'Publisher', link: '/publisher', hasDropdown: false },
-    { title: 'Offers', link: '/offers', hasDropdown: false },
-    { title: 'BPO Services', link: 'https://edmglobalsolutions.com/', hasDropdown: false, external: true },
-    { title: 'Resources', link: '/resources', hasDropdown: false },
+    { title: 'Home', link: '/', hasDropdown: false },
     { title: 'About Us', link: '/about-us', hasDropdown: false },
-    {
-      title: 'Login',
-      hasDropdown: true,
-      dropdownItems: [
-        { title: 'Advertiser Login', link: 'https://advertiser.edmleadnetwork.com/auth/login', external: true },
-        { title: 'Publisher Login', link: 'https://publishers.edmleadnetwork.com/auth/login', external: true },
-        { title: 'EDM Broker', link: '/edm-broker' },
-      ]
-    },
+    { title: 'Contact', link: '/contact', hasDropdown: false },
+    { title: 'Services', link: '/services', hasDropdown: false },
   ];
 
   return (
@@ -56,20 +32,20 @@ const Header = () => {
       <header className={`w-full transition-all duration-300 bg-black ${
         isScrolled ? 'fixed top-0 shadow-md z-50' : ''
       }`}>
-        {/* Here we will show the logo  and Main Navigation */}
+        {/* Logo and Main Navigation */}
         <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Here we are showing the company logo*/}
+            {/* Company Logo */}
             <a href="/" className="flex-shrink-0">
               <img 
-                src="/images/logo.png" 
+                src="/logo.jpeg" 
                 alt="EDM Network" 
                 className="h-16 w-auto"
               />
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-6">
               {menuItems.map((item, index) => (
                 <div key={index} className="relative group">
                   {item.hasDropdown ? (
@@ -104,9 +80,7 @@ const Header = () => {
                       href={item.link}
                       target={item.external ? '_blank' : '_self'}
                       rel={item.external ? 'noopener noreferrer' : ''}
-                      className={`px-3 py-2 text-sm font-medium text-white hover:text-[#007b64] transition ${
-                        item.title === 'Login' ? 'bg-[#007C62] text-white hover:bg-[#006b53] rounded-md' : ''
-                      }`}
+                      className="px-3 py-2 text-sm font-medium text-white hover:text-[#007b64] transition"
                     >
                       {item.title}
                     </a>
@@ -131,24 +105,24 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* All the Social Media Icons Representation */}
+        {/* Social Media Icons and Call Button */}
         <div className="border-t border-gray-800 py-2 px-4 hidden lg:block">
           <div className="container mx-auto">
             <div className="flex justify-end items-center space-x-4">
               {/* Social Icons */}
-              <a href="#publications" className="hover:opacity-80 transition">
+              {/* <a href="#publications" className="hover:opacity-80 transition">
                 <img src="/publication-icon.png" alt="Publications" className="w-8 h-8" />
-              </a>
-              <a href="https://m.youtube.com/channel/UCG8wWfoFB2D_EI6LeB2HZFA" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
+              </a> */}
+              {/* <a href="https://m.youtube.com/channel/UCG8wWfoFB2D_EI6LeB2HZFA" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
                 <img src="/youtube-icon.png" alt="YouTube" className="w-8 h-8" />
-              </a>
-              <a href="#" className="hover:opacity-80 transition">
+              </a> */}
+              {/* <a href="#" className="hover:opacity-80 transition">
                 <img src="/instagram-icon.png" alt="Instagram" className="w-8 h-8" />
-              </a>
-              <a href="https://www.linkedin.com/company/edm-lead-network" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
+              </a> */}
+              {/* <a href="https://www.linkedin.com/company/edm-lead-network" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
                 <img src="/linkedin-icon.png" alt="LinkedIn" className="w-8 h-8" />
-              </a>
-              <a href="https://m.facebook.com/100068100515076/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
+              </a> */}
+              <a href="https://www.facebook.com/share/1LDuTEw6J2/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
                 <img src="/facebook-icon.png" alt="Facebook" className="w-8 h-8" />
               </a>
               
@@ -165,13 +139,13 @@ const Header = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <span className="text-white font-medium">(833) 711-8975</span>
+                <span className="text-white font-medium">3135817026</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* When someone is viewing on the mobile phone who the menu appears*/}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden bg-black border-t border-gray-800 px-4 pb-4">
             {menuItems.map((item, index) => (
@@ -208,9 +182,7 @@ const Header = () => {
                     href={item.link}
                     target={item.external ? '_blank' : '_self'}
                     rel={item.external ? 'noopener noreferrer' : ''}
-                    className={`block py-3 px-2 text-white hover:text-[#007b64] ${
-                      item.title === 'Login' ? 'bg-[#007C62] text-white hover:bg-[#006b53] rounded-md my-2' : ''
-                    }`}
+                    className="block py-3 px-2 text-white hover:text-[#007b64]"
                   >
                     {item.title}
                   </a>
@@ -218,7 +190,7 @@ const Header = () => {
               </div>
             ))}
             
-            {/* Here Who the Icons Are Viewing in the Mobile pHone  */}
+            {/* Mobile Social Icons */}
             <div className="flex items-center justify-center space-x-4 mt-4 pt-4 border-t border-gray-800">
               <a href="#publications" className="p-2">
                 <img src="/publication-icon.png" alt="Publications" className="w-8 h-8" />
