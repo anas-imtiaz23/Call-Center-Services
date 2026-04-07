@@ -1,10 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artist Media</title>
+    <title>Artist Media - Lead Generation for Call Centers</title>
+    <!-- Tailwind CSS CDN - Working version -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom config for your brand colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'teal': '#00BCA2',
+              'darkteal': '#008f7b',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Fallback styles in case CDN fails -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background: #0A1C2E;
+      }
+      .fallback-header {
+        background: black;
+        padding: 1rem;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

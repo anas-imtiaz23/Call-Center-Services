@@ -1,21 +1,3 @@
-// import React from 'react'
-// import Header from './Components/Header'
-// import Home from './Components/Home'
-// import Footer from './Components/Footer'
-// import Contact from './Components/Contact'
-// function App() {
-//   return (
-//     <>
-//     <Header />
-//     <Home />
-//     <Footer />
-//     <Contact />
-//     </>
-//   )
-// }
-
-// export default App
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from '../src/Components/Header';
