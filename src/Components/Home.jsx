@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState('first');
   const [activeSlideMobile, setActiveSlideMobile] = useState('first');
   const [countersStarted, setCountersStarted] = useState(false);
@@ -8,6 +10,18 @@ const Home = () => {
 
   const showSlide = (slide) => setActiveSlide(slide);
   const showSlideMobile = (slide) => setActiveSlideMobile(slide);
+
+  // Navigation handlers
+  const handleGetFreeQuote = () => {
+    navigate('/lead-capture');
+  };
+
+  const handleExploreVerticals = () => {
+    const verticalsSection = document.getElementById('verticals');
+    if (verticalsSection) {
+      verticalsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -105,10 +119,16 @@ const Home = () => {
                 <p>Trusted by 100+ call centers nationwide — we don't just deliver leads, we deliver predictable revenue growth.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="inline-block bg-[#00BCA2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#008f7b] transition transform hover:scale-105 duration-300 shadow-lg text-center">
+                <button 
+                  onClick={handleGetFreeQuote}
+                  className="inline-block bg-[#00BCA2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#008f7b] transition transform hover:scale-105 duration-300 shadow-lg text-center"
+                >
                   Get Free Quote
                 </button>
-                <button className="inline-block border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition text-center backdrop-blur-sm">
+                <button 
+                  onClick={handleExploreVerticals}
+                  className="inline-block border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition text-center backdrop-blur-sm"
+                >
                   Explore Verticals
                 </button>
               </div>
@@ -239,7 +259,7 @@ const Home = () => {
       </section>
 
       {/* Industries / Verticals Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="verticals">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-1 bg-[#00BCA2]/10 rounded-full mb-4">
@@ -355,7 +375,7 @@ const Home = () => {
                     <li className="flex items-center gap-2">✓ Real-time performance dashboard</li>
                     <li className="flex items-center gap-2">✓ Dedicated account manager</li>
                   </ul>
-                  <button className="inline-block bg-white text-[#00BCA2] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition w-full">Apply Now</button>
+                  <button onClick={handleGetFreeQuote} className="inline-block bg-white text-[#00BCA2] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition w-full">Apply Now</button>
                 </div>
               </div>
             </div>
@@ -377,7 +397,7 @@ const Home = () => {
                     <li className="flex items-center gap-2">✓ Customizable budgets</li>
                     <li className="flex items-center gap-2">✓ Dedicated campaign manager</li>
                   </ul>
-                  <button className="inline-block bg-white text-[#00BCA2] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition w-full">Start Campaign</button>
+                  <button onClick={handleGetFreeQuote} className="inline-block bg-white text-[#00BCA2] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition w-full">Start Campaign</button>
                 </div>
               </div>
             </div>
@@ -399,7 +419,7 @@ const Home = () => {
                     <li className="flex items-center gap-2">✓ No long-term contracts</li>
                     <li className="flex items-center gap-2">✓ Exclusive territories available</li>
                   </ul>
-                  <button className="inline-block bg-white text-[#00BCA2] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition w-full">Get Leads</button>
+                  <button onClick={handleGetFreeQuote} className="inline-block bg-white text-[#00BCA2] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition w-full">Get Leads</button>
                 </div>
               </div>
             </div>
@@ -460,7 +480,12 @@ const Home = () => {
                 <div className="text-7xl mb-4 animate-bounce">📞🚀</div>
                 <h3 className="text-2xl font-bold text-[#0F2B3D] mb-3">Ready to Scale Your Call Center?</h3>
                 <p className="text-gray-600 mb-6">Get a free, no-obligation quote tailored to your vertical and volume requirements.</p>
-                <button className="inline-block bg-[#00BCA2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#008f7b] transition shadow-lg hover:shadow-xl">Get Your Free Quote →</button>
+                <button 
+                  onClick={handleGetFreeQuote}
+                  className="inline-block bg-[#00BCA2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#008f7b] transition shadow-lg hover:shadow-xl"
+                >
+                  Get Your Free Quote →
+                </button>
               </div>
             </div>
           </div>
@@ -475,8 +500,18 @@ const Home = () => {
             Join 100+ successful call centers that trust Artist Media for premium, compliant leads across all major verticals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-block bg-[#00BCA2] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#008f7b] transition shadow-xl hover:scale-105 transform duration-300">Get Free Quote →</button>
-            <button className="inline-block border-2 border-[#00BCA2] text-[#00BCA2] bg-transparent px-10 py-4 rounded-full font-bold text-lg hover:bg-[#00BCA2] hover:text-white transition hover:scale-105 transform duration-300">Explore Verticals</button>
+            <button 
+              onClick={handleGetFreeQuote}
+              className="inline-block bg-[#00BCA2] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#008f7b] transition shadow-xl hover:scale-105 transform duration-300"
+            >
+              Get Free Quote →
+            </button>
+            <button 
+              onClick={handleExploreVerticals}
+              className="inline-block border-2 border-[#00BCA2] text-[#00BCA2] bg-transparent px-10 py-4 rounded-full font-bold text-lg hover:bg-[#00BCA2] hover:text-white transition hover:scale-105 transform duration-300"
+            >
+              Explore Verticals
+            </button>
           </div>
         </div>
       </section>

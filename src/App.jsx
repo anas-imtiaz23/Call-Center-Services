@@ -6,7 +6,7 @@ import Home from '../src/Components/Home';
 import Contact from '../src/Components/Contact';
 import AboutUs from '../src/Components/About';
 import Services from '../src/Components/Services';
-
+import LeadCaptureForm from '../src/Components/LeadCaptureForm';
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/lead-capture" element={<LeadCaptureForm />} />
             {/* Add more routes as needed */}
           </Routes>
         </main>

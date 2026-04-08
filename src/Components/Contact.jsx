@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase } from '../lib/supabase';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,14 +33,45 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission - Replace with actual API call
-    setTimeout(() => {
+    try {
+      // Insert lead into Supabase
+      const { data, error } = await supabase
+        .from('leads')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company || null,
+            vertical: formData.vertical || null,
+            monthly_volume: formData.monthlyVolume || null,
+            message: formData.message,
+            source: 'contact_form'
+          }
+        ]);
+
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
+
+      // If user opted for newsletter, add to subscribers
+      if (formData.newsletter) {
+        const { error: subError } = await supabase
+          .from('subscribers')
+          .insert([{ email: formData.email }]);
+        
+        if (subError) {
+          console.log('Newsletter signup error:', subError);
+        }
+      }
+
       setFormStatus({
         submitted: true,
         success: true,
-        message: 'Thank you for reaching out! A member of our team will contact you within 24 hours to discuss your lead generation needs.'
+        message: 'Thank you! Our team will contact you within 24 hours.'
       });
-      setIsSubmitting(false);
+      
       setFormData({
         name: '',
         email: '',
@@ -51,10 +83,17 @@ const Contact = () => {
         newsletter: false
       });
       
-      setTimeout(() => {
-        setFormStatus(prev => ({ ...prev, submitted: false }));
-      }, 6000);
-    }, 1500);
+      setTimeout(() => setFormStatus(prev => ({ ...prev, submitted: false })), 5000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: 'Something went wrong. Please try again or call us directly at (833) 711-8975.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const verticalOptions = [
@@ -114,7 +153,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-300">Phone (Toll-Free)</p>
-                    <a href="tel:+18337118975" className="text-xl font-semibold hover:text-[#00BCA2] transition">3135817026</a>
+                    <a href="tel:+13135817026" className="text-xl font-semibold hover:text-[#00BCA2] transition">(313) 581-7026</a>
                     <p className="text-xs text-gray-400 mt-1">Mon-Fri: 9am - 8pm EST</p>
                   </div>
                 </div>
@@ -127,14 +166,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-300">Email</p>
-                    <a href="mailto:info@artistmedia.com" className="hover:text-[#00BCA2] transition break-all">artistmedia.digital@gmail.com</a>
-                    <br />
-                    <a href="mailto:sales@artistmedia.com" className="text-sm hover:text-[#00BCA2] transition break-all"></a>
+                    <a href="mailto:artistmedia.digital@gmail.com" className="hover:text-[#00BCA2] transition break-all">artistmedia.digital@gmail.com</a>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                  {/* <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-[#00BCA2] transition-colors duration-300">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-[#00BCA2] transition-colors duration-300">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -142,9 +179,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-300">Headquarters</p>
-                    <p className="font-medium">New York, NY 10001</p>
+                    <p className="font-medium">Michigan, USA</p>
                     <p className="text-sm text-gray-400">United States</p>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
@@ -267,7 +304,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition"
-                        placeholder="(833) 711-8975"
+                        placeholder="(313) 581-7026"
                       />
                     </div>
                     <div>
@@ -360,7 +397,7 @@ const Contact = () => {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Sending...
+                        Submitting...
                       </span>
                     ) : (
                       'Get Your Free Quote →'
@@ -447,7 +484,7 @@ const Contact = () => {
           <h3 className="text-2xl md:text-3xl font-bold mb-3">Ready to Scale Your Call Center?</h3>
           <p className="text-white/90 mb-6 max-w-2xl mx-auto">Join 100+ successful call centers that trust Artist Media for premium, compliant leads.</p>
           <a href="tel:+13135817026" className="inline-flex items-center gap-2 bg-white text-[#00BCA2] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
-            📞 Call Us Now: 3135817026
+            📞 Call Us Now: (313) 581-7026
           </a>
         </div>
       </div>
