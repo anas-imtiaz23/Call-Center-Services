@@ -172,10 +172,9 @@ const Home = () => {
                 </div>
                 <div className={`${activeSlide === 'buy' ? 'block' : 'hidden'} animate-fadeIn`}>
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">Are you US based or non-US based?</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-6">Select Your Category</h3>
                     <div className="space-y-3">
-                      <button className="w-full bg-gray-100 text-gray-800 py-3 rounded-md font-semibold hover:bg-[#00BCA2] hover:text-white transition" onClick={() => showSlide('individuals')}>US Based</button>
-                      <button className="w-full bg-gray-100 text-gray-800 py-3 rounded-md font-semibold hover:bg-[#00BCA2] hover:text-white transition" onClick={() => showSlide('nonUsa')}>Non-US Based</button>
+                      <button className="w-full bg-gray-100 text-gray-800 py-3 rounded-md font-semibold hover:bg-[#00BCA2] hover:text-white transition" onClick={() => showSlide('individuals')}>Call Center / Agency</button>
                       <button className="mt-3 text-sm text-gray-500 hover:text-[#00BCA2]" onClick={() => showSlide('first')}>← Back</button>
                     </div>
                   </div>
@@ -215,14 +214,6 @@ const Home = () => {
                     <p className="text-gray-600 mb-6 text-sm">Volume discounts & dedicated account manager</p>
                     <button className="inline-block w-full bg-[#00BCA2] text-white py-3 rounded-md font-semibold hover:bg-[#008f7b] transition text-center">Request Demo</button>
                     <button className="mt-3 text-sm text-gray-500 hover:text-[#00BCA2]" onClick={() => showSlide('individuals')}>← Back</button>
-                  </div>
-                </div>
-                <div className={`${activeSlide === 'nonUsa' ? 'block' : 'hidden'} animate-fadeIn`}>
-                  <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-6">International Inquiries</h3>
-                    <p className="text-gray-600 mb-6 text-sm">Our global team is ready to assist you</p>
-                    <button className="inline-block w-full bg-[#00BCA2] text-white py-3 rounded-md font-semibold hover:bg-[#008f7b] transition text-center">Contact Global Team</button>
-                    <button className="mt-3 text-sm text-gray-500 hover:text-[#00BCA2]" onClick={() => showSlide('buy')}>← Back</button>
                   </div>
                 </div>
               </div>
