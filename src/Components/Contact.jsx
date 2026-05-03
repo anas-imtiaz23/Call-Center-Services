@@ -35,7 +35,7 @@ const Contact = () => {
     
     try {
       // Insert lead into Supabase
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('leads')
         .insert([
           {
@@ -484,7 +484,7 @@ const Contact = () => {
           <h3 className="text-2xl md:text-3xl font-bold mb-3">Ready to Scale Your Call Center?</h3>
           <p className="text-white/90 mb-6 max-w-2xl mx-auto">Join 100+ successful call centers that trust Artist Media for premium, compliant leads.</p>
           <a href="tel:+13135817026" className="inline-flex items-center gap-2 bg-white text-[#00BCA2] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
-            📞 Call Us Now: (313) 581-7026
+            📞 Call Us Now: (152) 34567893
           </a>
         </div>
       </div>

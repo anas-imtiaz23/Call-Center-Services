@@ -1,0 +1,152 @@
+﻿
+> call@0.0.0 lint
+> eslint .
+
+
+C:\Call Center Website\Call\src\Components\Contact.jsx
+  38:15  error  'data' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Call Center Website\Call\src\Components\Footer.jsx
+  160:18  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  158 |               </li> */}
+  159 |               <li className="flex items-center space-x-3">
+> 160 |                 <Icon name="phone" className="w-5 h-5 text-[#00BCA2] flex-shrink-0" />
+      |                  ^^^^ This component is created during render
+  161 |                 <a href="tel:+18337118975" className="text-sm hover:text-[#00BCA2] transition-colors">
+  162 |                   3135817026
+  163 |                 </a>
+
+  38 |
+  39 |   // SVG Icon Components
+> 40 |   const Icon = ({ name, className = "w-5 h-5" }) => {
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 41 |     const icons = {
+     | ^^^^^^^^^^^^^^^^^^^
+> 42 |       location: (
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^
+> 84 |     return icons[name] || null;
+     | ^^^^^^^^^^^^^^^^^^^
+> 85 |   };
+     | ^^^^ The component is created during render here
+  86 |
+  87 |   return (
+  88 |     <footer className="bg-gray-900 text-gray-300">                               react-hooks/static-components
+  166:18  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  164 |               </li>
+  165 |               <li className="flex items-center space-x-3">
+> 166 |                 <Icon name="email" className="w-5 h-5 text-[#00BCA2] flex-shrink-0" />
+      |                  ^^^^ This component is created during render
+  167 |                 <a href="mailto:info@edmleadnetwork.com" className="text-sm hover:text-[#00BCA2] transition-colors">
+  168 |                   artistmedia.digital@gmail.com
+  169 |                 </a>
+
+  38 |
+  39 |   // SVG Icon Components
+> 40 |   const Icon = ({ name, className = "w-5 h-5" }) => {
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 41 |     const icons = {
+     | ^^^^^^^^^^^^^^^^^^^
+> 42 |       location: (
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^
+> 84 |     return icons[name] || null;
+     | ^^^^^^^^^^^^^^^^^^^
+> 85 |   };
+     | ^^^^ The component is created during render here
+  86 |
+  87 |   return (
+  88 |     <footer className="bg-gray-900 text-gray-300">  react-hooks/static-components
+
+C:\Call Center Website\Call\src\Components\Header.jsx
+  23:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  21 |   // Close mobile menu when route changes
+  22 |   useEffect(() => {
+> 23 |     setIsMenuOpen(false);
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  24 |   }, [location]);
+  25 |
+  26 |   // Handle dropdown toggles  react-hooks/set-state-in-effect
+
+C:\Call Center Website\Call\src\Components\Home.jsx
+   7:10  error  'activeSlideMobile' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+  12:9   error  'showSlideMobile' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  32:13  error  Error: Cannot access variable before it is declared
+
+`startCounters` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  30 |           if (entry.isIntersecting && !countersStarted) {
+  31 |             setCountersStarted(true);
+> 32 |             startCounters();
+     |             ^^^^^^^^^^^^^ `startCounters` accessed before it is declared
+  33 |           }
+  34 |         });
+  35 |       },
+
+  40 |   }, [countersStarted]);
+  41 |
+> 42 |   const startCounters = () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 43 |     const counters = [
+     | ^^^^^^^^^^^^^^^^^^^^^^
+> 44 |       { element: document.getElementById('campaigns-counter'), target: 250, suffix: '+' },
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^
+> 61 |     });
+     | ^^^^^^^^^^^^^^^^^^^^^^
+> 62 |   };
+     | ^^^^^ `startCounters` is declared here
+  63 |
+  64 |   // Client success stories
+  65 |   const successStories = [  react-hooks/immutability
+
+C:\Call Center Website\Call\src\Components\LeadCaptureForm.jsx
+  529:18  error  'e' is defined but never used                                                         no-unused-vars
+  538:20  error  'e' is defined but never used                                                         no-unused-vars
+  638:15  error  'data' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Call Center Website\Call\src\Components\Services.jsx
+  20:13  error  Error: Cannot access variable before it is declared
+
+`startCounters` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  18 |           if (entry.isIntersecting && !countersStarted) {
+  19 |             setCountersStarted(true);
+> 20 |             startCounters();
+     |             ^^^^^^^^^^^^^ `startCounters` accessed before it is declared
+  21 |           }
+  22 |         });
+  23 |       },
+
+  28 |   }, [countersStarted]);
+  29 |
+> 30 |   const startCounters = () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |     const counters = [
+     | ^^^^^^^^^^^^^^^^^^^^^^
+> 32 |       { element: document.getElementById('clients-counter'), target: 100, suffix: '+' },
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^
+> 49 |     });
+     | ^^^^^^^^^^^^^^^^^^^^^^
+> 50 |   };
+     | ^^^^^ `startCounters` is declared here
+  51 |
+  52 |   // Service verticals
+  53 |   const verticals = [  react-hooks/immutability
+
+Γ£û 11 problems (11 errors, 0 warnings)
+

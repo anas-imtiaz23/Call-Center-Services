@@ -85,6 +85,7 @@ const Home = () => {
     { name: 'Final Expense', icon: '⚰️', leads: '25K+ monthly', bg: 'from-gray-50 to-gray-100' },
     { name: 'Medicare', icon: '🏥', leads: '40K+ monthly', bg: 'from-red-50 to-red-100' },
     { name: 'Home Improvement', icon: '🏠', leads: '35K+ monthly', bg: 'from-amber-50 to-amber-100' },
+    { name: 'Pest Control', icon: '🐜', leads: '30K+ monthly', bg: 'from-emerald-50 to-teal-100' },
     { name: 'Obama Care (ACA)', icon: '🛡️', leads: '30K+ monthly', bg: 'from-green-50 to-green-100' }
   ];
 

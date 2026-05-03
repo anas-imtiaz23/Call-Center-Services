@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+  const navigate = useNavigate();
+
+  // Navigation handlers
+  const handleGetFreeQuote = () => {
+    navigate('/lead-capture');
+  };
   // Core values tailored for multi-vertical call center
   const coreValues = [
     {
@@ -66,6 +73,12 @@ const About = () => {
       icon: '🏠',
       description: 'Homeowners actively seeking roofing, solar, windows, bathroom remodeling, and HVAC services.',
       features: ['Project-specific', 'Verified homeowners', 'High intent leads']
+    },
+    {
+      title: 'Pest Control',
+      icon: '🐜',
+      description: 'Homeowners needing safe, effective pest inspection and elimination services nationwide.',
+      features: ['Roaches, mice, termites, ants, spiders', 'Owner-occupied home targeting', 'Inspection appointments booked']
     },
     {
       title: 'Obama Care (ACA)',
@@ -176,7 +189,7 @@ const About = () => {
                   <div className="text-5xl mb-4">📞🚀</div>
                   <h3 className="text-2xl font-bold text-[#0F2B3D] mb-3">Start Your Journey to High-Quality Leads!</h3>
                   <p className="text-gray-600 mb-6">Complete a quick form and get a free, no-obligation quote. Protect your call center revenue, save on acquisition costs, and scale with peace of mind across all verticals.</p>
-                  <a href="#" className="inline-block bg-[#00BCA2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#008f7b] transition shadow-lg hover:shadow-xl">Get Your Free Quote →</a>
+                  <button onClick={handleGetFreeQuote} className="inline-block bg-[#00BCA2] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#008f7b] transition shadow-lg hover:shadow-xl">Get Your Free Quote →</button>
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#00BCA2]/20 rounded-full blur-2xl -z-10"></div>
@@ -415,7 +428,7 @@ const About = () => {
             Join 100+ successful call centers that trust Artist Media for premium, compliant leads across Auto, Medicare, Final Expense, Home Improvement, and ACA.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="inline-block bg-[#00BCA2] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#008f7b] transition shadow-xl">Get Your Free Quote →</a>
+            <button onClick={handleGetFreeQuote} className="inline-block bg-[#00BCA2] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#008f7b] transition shadow-xl">Get Your Free Quote →</button>
             <a href="#" className="inline-block border-2 border-[#00BCA2] text-[#00BCA2] bg-transparent px-10 py-4 rounded-full font-bold text-lg hover:bg-[#00BCA2] hover:text-white transition">View Lead Verticals</a>
           </div>
         </div>

@@ -1,9 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('buyers');
   const [countersStarted, setCountersStarted] = useState(false);
   const statsRef = useRef(null);
+
+  const handleGetFreeQuote = () => {
+    navigate('/lead-capture');
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -84,6 +90,16 @@ const Services = () => {
       volume: '35,000+ monthly',
       conversion: '42% avg',
       color: 'from-amber-500 to-orange-600'
+    },
+    {
+      id: 'pest',
+      icon: '🐜',
+      title: 'Pest Control Leads',
+      description: 'Homeowners needing safe, effective pest inspection and elimination services nationwide.',
+      features: ['Roaches, mice, termites, ants, spiders', 'Owner-occupied home targeting', 'Inspection & treatment booked', 'EPA-approved solutions', 'Flexible scheduling'],
+      volume: '35,000+ monthly',
+      conversion: '38% avg',
+      color: 'from-emerald-500 to-teal-700'
     },
     {
       id: 'aca',
@@ -189,7 +205,7 @@ const Services = () => {
                       <span className="text-xs text-gray-400">Avg. Conversion</span>
                       <div className="font-bold text-[#00BCA2]">{vertical.conversion}</div>
                     </div>
-                    <button className="text-[#00BCA2] text-sm font-semibold hover:underline">Get Quote →</button>
+                    <button onClick={handleGetFreeQuote} className="text-[#00BCA2] text-sm font-semibold hover:underline">Get Quote →</button>
                   </div>
                 </div>
               </div>
@@ -440,8 +456,9 @@ const Services = () => {
             Get started with premium, compliant leads today. Request your free quote and volume pricing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-block bg-[#00BCA2] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#008f7b] transition shadow-xl">Get Free Quote →</button>
-            <button className="inline-block border-2 border-[#00BCA2] text-[#00BCA2] bg-transparent px-10 py-4 rounded-full font-bold text-lg hover:bg-[#00BCA2] hover:text-white transition">Talk to Sales</button>
+            <button onClick={handleGetFreeQuote} className="inline-block bg-[#00BCA2] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#008f7b] transition shadow-xl">Get Free Quote →</button>
+            <button onClick={handleGetFreeQuote} className="inline-block border-2 border-[#00BCA2] text-[#00BCA2] bg-transparent px-10 py-4 rounded-full font-bold text-lg hover:bg-[#00BCA2] hover:text-white transition">Talk to Sales</button>
+            <button onClick={handleGetFreeQuote} className="inline-block bg-white text-[#00BCA2] px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition border border-[#00BCA2]">Get Started Today</button>
           </div>
         </div>
       </section>
