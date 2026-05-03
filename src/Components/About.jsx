@@ -144,17 +144,17 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section - inspired by your image */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0F2B3D] mb-4">Why <span className="text-[#00BCA2]">Choose Us?</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F2B3D] mb-4">Why <span className="text-[#00BCA2]">Choose Us?</span></h2>
             <div className="w-24 h-1 bg-[#00BCA2] mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               We understand that every call center has unique needs. That's why we offer customized lead solutions across multiple verticals to fit your sales process and budget.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6">
               <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-4">
@@ -206,7 +206,7 @@ const About = () => {
             <div className="w-24 h-1 bg-[#00BCA2] mx-auto mb-6"></div>
             <p className="text-lg text-gray-600">Diversified, compliant, and high-converting leads tailored for your call center's success.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {verticals.map((vertical, idx) => (
               <div key={idx} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group border-b-3 border-transparent hover:border-[#00BCA2]">
                 <div className="p-6 text-center">
@@ -226,9 +226,9 @@ const About = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-[#0F2B3D] mb-6">Our <span className="text-[#00BCA2]">Story</span></h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
@@ -244,25 +244,25 @@ const About = () => {
               </div>
             </div>
             <div className="relative bg-gradient-to-br from-[#00BCA2] to-[#0F2B3D] rounded-2xl overflow-hidden shadow-xl">
-              <div className="p-8 text-white text-center">
-                <div className="text-6xl mb-4">📞🚗🏠⚰️🏥</div>
-                <h3 className="text-2xl font-bold mb-2">Artist Media at a Glance</h3>
-                <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="p-6 md:p-8 text-white text-center">
+                <div className="text-4xl md:text-6xl mb-4">📞🚗🏠⚰️🏥</div>
+                <h3 className="text-xl md:text-2xl font-bold mb-2">Artist Media at a Glance</h3>
+                <div className="grid grid-cols-2 gap-3 md:gap-4 mt-6">
                   <div>
-                    <div className="text-3xl font-bold">100+</div>
-                    <div className="text-sm opacity-90">Active Call Centers</div>
+                    <div className="text-2xl md:text-3xl font-bold">100+</div>
+                    <div className="text-xs md:text-sm opacity-90">Active Call Centers</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">2M+</div>
-                    <div className="text-sm opacity-90">Leads Delivered</div>
+                    <div className="text-2xl md:text-3xl font-bold">2M+</div>
+                    <div className="text-xs md:text-sm opacity-90">Leads Delivered</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">98%</div>
-                    <div className="text-sm opacity-90">Client Retention</div>
+                    <div className="text-2xl md:text-3xl font-bold">98%</div>
+                    <div className="text-xs md:text-sm opacity-90">Client Retention</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">24/7</div>
-                    <div className="text-sm opacity-90">Support</div>
+                    <div className="text-2xl md:text-3xl font-bold">24/7</div>
+                    <div className="text-xs md:text-sm opacity-90">Support</div>
                   </div>
                 </div>
               </div>
@@ -272,9 +272,9 @@ const About = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-b-4 border-[#00BCA2]">
               <div className="w-16 h-16 bg-[#00BCA2]/10 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-[#00BCA2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

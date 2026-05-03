@@ -5,7 +5,6 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [logoError, setLogoError] = useState(false);
   const [fbError, setFbError] = useState(false);
   const location = useLocation();
 
@@ -49,20 +48,11 @@ const Header = () => {
         {/* Logo and Main Navigation */}
         <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Company Logo - With Fallback */}
+            {/* Company Logo */}
             <Link to="/" className="flex-shrink-0">
-              {!logoError ? (
-                <img 
-                  src="/logo.jpeg" 
-                  alt="Artist Media" 
-                  className="h-16 w-auto"
-                  onError={() => setLogoError(true)}
-                />
-              ) : (
-                <span className="text-white text-2xl font-bold tracking-tight">
-                  Artist<span className="text-[#00BCA2]">Media</span>
-                </span>
-              )}
+              <span className="text-white text-2xl font-bold tracking-tight">
+                Artist<span className="text-[#00BCA2]">Media</span>
+              </span>
             </Link>
 
             {/* Desktop Menu */}
