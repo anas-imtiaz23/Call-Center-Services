@@ -6,6 +6,7 @@ const Home = () => {
   const [activeSlide, setActiveSlide] = useState('first');
   const [activeSlideMobile, setActiveSlideMobile] = useState('first');
   const [countersStarted, setCountersStarted] = useState(false);
+  const [videoAvailable, setVideoAvailable] = useState(true);
   const statsRef = useRef(null);
 
   const showSlide = (slide) => setActiveSlide(slide);
@@ -95,14 +96,30 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/50 z-10"></div>
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/ZV8s1ba8FWc?autoplay=1&mute=1&loop=1&playlist=ZV8s1ba8FWc&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            title="Artist Media Background"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover pointer-events-none"
-            style={{ filter: 'brightness(0.5)' }}
+          {/* Background video: place a watermark-free MP4 at /public/videos/hero.mp4 */}
+          {videoAvailable ? (
+            <video
+              src="/videos/hero.mp4"
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+              style={{ filter: 'brightness(0.45)' }}
+              onError={() => setVideoAvailable(false)}
+              onCanPlay={() => setVideoAvailable(true)}
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center z-0" aria-hidden="true">
+              <div className="globe" />
+            </div>
+          )}
+          <div
+            className="absolute inset-0 w-full h-full z-[-1]"
+            style={{ background: 'linear-gradient(90deg, #071020 0%, #0f1724 100%)' }}
+            aria-hidden="true"
           />
         </div>
 
@@ -532,6 +549,39 @@ const Home = () => {
         .hover\\:rotate-y-180:hover { transform: rotateY(180deg); }
         .perspective { perspective: 1000px; }
         .bg-grid-pattern { background-image: radial-gradient(circle, #00BCA2 1px, transparent 1px); background-size: 30px 30px; }
+        /* Simple CSS globe animation fallback */
+        .globe {
+          width: 680px;
+          height: 680px;
+          max-width: 120vw;
+          max-height: 120vh;
+          border-radius: 50%;
+          background: radial-gradient(circle at 30% 30%, #1e3a5f 0%, #0b2233 35%, #02111a 70%);
+          position: relative;
+          box-shadow: inset -40px -20px 80px rgba(0,0,0,0.6), 0 20px 60px rgba(2,6,23,0.6);
+          overflow: hidden;
+          transform: translateZ(0);
+        }
+        .globe::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image: conic-gradient(from 90deg at 50% 50%, rgba(34,139,230,0.18) 0deg, rgba(34,139,230,0.18) 40deg, transparent 40deg, transparent 100%);
+          mix-blend-mode: screen;
+          animation: rotateGlobe 12s linear infinite;
+          filter: blur(10px) contrast(1.1) brightness(1.05);
+        }
+        .globe::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.06), transparent 15%), radial-gradient(circle at 70% 65%, rgba(255,255,255,0.03), transparent 18%);
+          pointer-events: none;
+        }
+        @keyframes rotateGlobe {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
       `}</style>
     </div>
   );
