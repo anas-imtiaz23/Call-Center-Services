@@ -26,7 +26,6 @@ const ClientLandingPage = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Get current timestamp in USA format
   const getUsaTimestamp = () => {
     const now = new Date();
     return now.toLocaleString('en-US', {
@@ -42,19 +41,15 @@ const ClientLandingPage = () => {
     });
   };
 
-  // Get device info
   const getDeviceInfo = () => {
     if (isMobile) return '📱 Mobile Phone';
     if (isTablet) return '📟 Tablet';
     return '💻 Desktop Computer';
   };
 
-  // Get location using multiple APIs
   useEffect(() => {
     const detectLocation = async () => {
       setLoading(true);
-      
-      // Set basic info that doesn't need API
       setVisitorInfo(prev => ({
         ...prev,
         timestamp: getUsaTimestamp(),
@@ -68,7 +63,6 @@ const ClientLandingPage = () => {
       let stateName = null;
       let zipCode = null;
       
-      // Try multiple APIs
       const apis = [
         'https://ipapi.co/json/',
         'https://ip-api.com/json/',
@@ -80,16 +74,12 @@ const ClientLandingPage = () => {
           const response = await fetch(apiUrl);
           if (response.ok) {
             const data = await response.json();
-            
-            // Extract IP
             ipAddress = data.ip || data.query;
-            
-            // Extract location data
             if (data.city && data.city !== 'Unknown' && data.city !== 'none') {
               cityName = data.city;
               stateName = data.region || data.regionName;
               zipCode = data.postal || data.zip;
-              break; // Stop if we found good data
+              break;
             }
           }
         } catch (e) {
@@ -119,7 +109,6 @@ const ClientLandingPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
       const { error } = await supabase
         .from('leads')
@@ -187,16 +176,35 @@ const ClientLandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-[#F5F5F0]">
       
-      {/* Top Trust Bar */}
-      <div className="bg-[#00BCA2]/15 border-b border-[#00BCA2]/20">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-300">
-            <span className="flex items-center gap-1">🔒 256-bit SSL Encryption</span>
-            <span className="flex items-center gap-1">✓ Fully DNC & TCPA Compliant</span>
-            <span className="flex items-center gap-1">📞 USA Licensed Agents</span>
-            <span className="flex items-center gap-1">⭐ 4.9/5 Rating</span>
+      {/* Animated Background Elements - Orange */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#FB923C]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#FB923C]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FB923C]/5 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Top Trust Bar - Orange */}
+      <div className="bg-[#FB923C]/10 border-b border-[#FB923C]/20 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-2.5">
+          <div className="flex flex-wrap justify-center gap-6 text-xs text-[#475569]">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
+              🔒 256-bit SSL Encryption
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
+              ✓ Fully DNC & TCPA Compliant
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
+              📞 USA Licensed Agents
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
+              ⭐ 4.9/5 Rating (2,500+ Reviews)
+            </span>
           </div>
         </div>
       </div>
@@ -204,15 +212,19 @@ const ClientLandingPage = () => {
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-5xl mx-auto">
           
-          {/* Header */}
+          {/* Header - Soft Stone */}
           <div className="text-center mb-10">
-            <div className="inline-block bg-[#00BCA2]/20 rounded-full px-4 py-1 mb-4">
-              <span className="text-[#00BCA2] text-sm font-semibold">🇺🇸 Licensed U.S. Insurance Advisors</span>
+            <div className="inline-flex items-center gap-2 bg-[#FB923C]/10 backdrop-blur-sm rounded-full px-5 py-2 mb-5 border border-[#FB923C]/20 shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FB923C] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FB923C]"></span>
+              </span>
+              <span className="text-[#FB923C] text-sm font-semibold tracking-wide">🇺🇸 Licensed U.S. Insurance Advisors</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              Premium Insurance Quotes Delivered with Confidence
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1E293B] mb-4 tracking-tight">
+              Premium Insurance Quotes <br className="hidden sm:block"/><span className="text-[#FB923C]">Delivered with Confidence</span>
             </h1>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-[#475569] text-lg max-w-2xl mx-auto">
               Connect with licensed USA agents to compare the most competitive auto, healthcare, and specialty insurance options — fast, secure, and compliant.
             </p>
           </div>
@@ -223,146 +235,196 @@ const ClientLandingPage = () => {
             {/* LEFT COLUMN - Visitor Info & Trust Signals */}
             <div className="space-y-6">
               
-              {/* IP & Location Card */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              {/* IP & Location Card - Soft Stone */}
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#E8E5DF] shadow-[0_4px_12px_rgba(30,41,59,0.06)]">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 bg-[#00BCA2]/20 rounded-full flex items-center justify-center">
-                    <span className="text-[#00BCA2]">📍</span>
+                  <div className="w-8 h-8 bg-[#FB923C]/10 rounded-full flex items-center justify-center">
+                    <span className="text-[#FB923C]">📍</span>
                   </div>
-                  <h3 className="text-white font-bold text-lg">Your Location Details</h3>
+                  <h3 className="text-[#1E293B] font-bold text-lg">Your Location Details</h3>
                 </div>
                 
                 {loading ? (
                   <div className="text-center py-4">
                     <div className="animate-pulse flex justify-center">
-                      <div className="w-8 h-8 border-4 border-[#00BCA2] border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-8 h-8 border-4 border-[#FB923C] border-t-transparent rounded-full animate-spin"></div>
                     </div>
-                    <p className="text-gray-400 text-sm mt-2">Detecting your location...</p>
+                    <p className="text-[#475569] text-sm mt-2">Detecting your location...</p>
                   </div>
                 ) : (
                   <div className="space-y-3">
-                    <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-gray-300 text-sm">🌆 City/State:</span>
-                      <span className="text-white font-semibold">{visitorInfo.city}, {visitorInfo.state}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-[#E8E5DF]">
+                      <span className="text-[#475569] text-sm">🌆 City/State:</span>
+                      <span className="text-[#1E293B] font-semibold">{visitorInfo.city}, {visitorInfo.state}</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-gray-300 text-sm">📮 ZIP Code:</span>
-                      <span className="text-white font-semibold">{visitorInfo.zip}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-[#E8E5DF]">
+                      <span className="text-[#475569] text-sm">📮 ZIP Code:</span>
+                      <span className="text-[#1E293B] font-semibold">{visitorInfo.zip}</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-gray-300 text-sm">🖥️ IP Address:</span>
-                      <span className="text-white font-semibold text-sm">{visitorInfo.ip}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-[#E8E5DF]">
+                      <span className="text-[#475569] text-sm">🖥️ IP Address:</span>
+                      <span className="text-[#1E293B] font-semibold text-sm">{visitorInfo.ip}</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-gray-300 text-sm">📱 Device:</span>
-                      <span className="text-white font-semibold">{visitorInfo.device}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-[#E8E5DF]">
+                      <span className="text-[#475569] text-sm">📱 Device:</span>
+                      <span className="text-[#1E293B] font-semibold">{visitorInfo.device}</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-gray-300 text-sm">🌐 Browser:</span>
-                      <span className="text-white font-semibold">{visitorInfo.browser}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-[#E8E5DF]">
+                      <span className="text-[#475569] text-sm">🌐 Browser:</span>
+                      <span className="text-[#1E293B] font-semibold">{visitorInfo.browser}</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-white/10">
-                      <span className="text-gray-300 text-sm">💻 OS:</span>
-                      <span className="text-white font-semibold">{visitorInfo.os}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-[#E8E5DF]">
+                      <span className="text-[#475569] text-sm">💻 OS:</span>
+                      <span className="text-[#1E293B] font-semibold">{visitorInfo.os}</span>
                     </div>
                     <div className="flex justify-between items-center py-2">
-                      <span className="text-gray-300 text-sm">⏰ Current Time:</span>
-                      <span className="text-[#00BCA2] font-semibold text-sm">{visitorInfo.timestamp}</span>
+                      <span className="text-[#475569] text-sm">⏰ Current Time:</span>
+                      <span className="text-[#FB923C] font-semibold text-sm">{visitorInfo.timestamp}</span>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* Trust Badges */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              {/* Trust Badges - Orange */}
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-[#E8E5DF] shadow-[0_4px_12px_rgba(30,41,59,0.06)]">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 bg-[#00BCA2]/20 rounded-full flex items-center justify-center">
-                    <span className="text-[#00BCA2]">✅</span>
+                  <div className="w-8 h-8 bg-[#FB923C]/10 rounded-full flex items-center justify-center">
+                    <span className="text-[#FB923C]">✅</span>
                   </div>
-                  <h3 className="text-white font-bold text-lg">Why Clients Choose Artist Media</h3>
+                  <h3 className="text-[#1E293B] font-bold text-lg">Why Clients Choose Artist Media</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="text-center p-3 bg-white/5 rounded-xl">
+                  <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">🏆</div>
-                    <div className="text-white font-semibold text-sm">Top-rated Service</div>
-                    <div className="text-gray-400 text-xs">Trusted by 100+ call centers</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">Top-rated Service</div>
+                    <div className="text-[#475569] text-xs">Trusted by 100+ call centers</div>
                   </div>
-                  <div className="text-center p-3 bg-white/5 rounded-xl">
+                  <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">🔒</div>
-                    <div className="text-white font-semibold text-sm">Strict Compliance</div>
-                    <div className="text-gray-400 text-xs">TCPA & DNC safe</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">Strict Compliance</div>
+                    <div className="text-[#475569] text-xs">TCPA & DNC safe</div>
                   </div>
-                  <div className="text-center p-3 bg-white/5 rounded-xl">
+                  <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">⚡</div>
-                    <div className="text-white font-semibold text-sm">Rapid Response</div>
-                    <div className="text-gray-400 text-xs">Quote matching in minutes</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">Rapid Response</div>
+                    <div className="text-[#475569] text-xs">Quote matching in minutes</div>
                   </div>
-                  <div className="text-center p-3 bg-white/5 rounded-xl">
+                  <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">💰</div>
-                    <div className="text-white font-semibold text-sm">Competitive Quotes</div>
-                    <div className="text-gray-400 text-xs">Access to leading carriers</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">Competitive Quotes</div>
+                    <div className="text-[#475569] text-xs">Access to leading carriers</div>
                   </div>
                 </div>
               </div>
 
-              {/* Live Agent Status */}
-              <div className="bg-gradient-to-r from-[#00BCA2]/15 to-[#007C62]/15 rounded-2xl p-5 border border-[#00BCA2]/20 text-center">
+              {/* Live Agent Status - Orange */}
+              <div className="bg-gradient-to-r from-[#FB923C]/15 to-[#F97316]/15 rounded-2xl p-5 border border-[#FB923C]/20 text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  <span className="text-white text-sm font-semibold">🟢 Licensed Agents Available Now</span>
+                  <span className="text-[#1E293B] text-sm font-bold">🟢 Licensed Agents Available Now</span>
                 </div>
-                <p className="text-gray-300 text-sm">Average connection time: <span className="text-white font-bold">under 1 minute</span></p>
-                <p className="text-gray-400 text-xs mt-2">🇺🇸 Licensed USA agents · Secure, compliant service</p>
+                <p className="text-[#475569] text-sm">Average connection time: <span className="text-[#1E293B] font-bold">under 1 minute</span></p>
+                <p className="text-[#94A3B8] text-xs mt-2">🇺🇸 Licensed USA agents · Secure, compliant service</p>
               </div>
             </div>
 
             {/* RIGHT COLUMN - Trusted Form */}
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-              <div className="bg-gradient-to-r from-[#00BCA2] to-[#007C62] px-6 py-5">
-                <h2 className="text-white text-2xl font-bold">Request a Tailored Quote</h2>
+            <div className="bg-white rounded-2xl shadow-[0_10px_30px_-10px_rgba(30,41,59,0.08)] overflow-hidden border border-[#E8E5DF]">
+              <div className="bg-gradient-to-r from-[#FB923C] to-[#F97316] px-6 py-5">
+                <h2 className="text-white text-2xl font-black">Request a Tailored Quote</h2>
                 <p className="text-white/80 text-sm">Submit your details and our licensed team will prepare your best available options.</p>
               </div>
 
               {submitStatus && (
-                <div className={`m-6 p-4 rounded-xl ${submitStatus.success ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`}>
-                  <p className={submitStatus.success ? 'text-green-700' : 'text-red-700'}>{submitStatus.message}</p>
+                <div className={`m-6 p-4 rounded-xl border ${
+                  submitStatus.success ? 'bg-[#FB923C]/10 border-[#FB923C]/20 text-[#1E293B]' : 'bg-red-50 border-red-200 text-red-700'
+                }`}>
+                  <p className="font-medium">{submitStatus.message}</p>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="p-6 space-y-5">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name <span className="text-red-500">*</span></label>
-                  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition" placeholder="John Smith" />
+                  <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                    Full Name <span className="text-[#FB923C]">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    name="fullName" 
+                    value={formData.fullName} 
+                    onChange={handleChange} 
+                    required 
+                    className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-[#FAFAF8]"
+                    placeholder="John Smith" 
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number <span className="text-red-500">*</span></label>
-                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition" placeholder="(313) 581-7026" />
-                  <p className="text-xs text-gray-400 mt-1">✓ USA licensed agents will call you</p>
+                  <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                    Phone Number <span className="text-[#FB923C]">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    name="phone" 
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                    required 
+                    className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-[#FAFAF8]"
+                    placeholder="(313) 581-7026" 
+                  />
+                  <p className="text-xs text-[#FB923C] mt-1">✓ USA licensed agents will call you</p>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                  <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition" placeholder="john@example.com" />
+                  <label className="block text-sm font-semibold text-[#1E293B] mb-2">Email Address</label>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-[#FAFAF8]"
+                    placeholder="john@example.com" 
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Insurance Type <span className="text-red-500">*</span></label>
-                  <select name="insuranceType" value={formData.insuranceType} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition bg-white">
+                  <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                    Insurance Type <span className="text-[#FB923C]">*</span>
+                  </label>
+                  <select 
+                    name="insuranceType" 
+                    value={formData.insuranceType} 
+                    onChange={handleChange} 
+                    required 
+                    className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-[#FAFAF8]"
+                  >
                     <option value="">Select Insurance Type</option>
-                    {insuranceOptions.map((option, idx) => (<option key={idx} value={option}>{option}</option>))}
+                    {insuranceOptions.map((option, idx) => (
+                      <option key={idx} value={option}>{option}</option>
+                    ))}
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Best Time to Call</label>
-                  <select name="bestTimeToCall" value={formData.bestTimeToCall} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition bg-white">
+                  <label className="block text-sm font-semibold text-[#1E293B] mb-2">Best Time to Call</label>
+                  <select 
+                    name="bestTimeToCall" 
+                    value={formData.bestTimeToCall} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-[#FAFAF8]"
+                  >
                     <option value="">Select preferred time</option>
-                    {callTimeOptions.map((option, idx) => (<option key={idx} value={option}>{option}</option>))}
+                    {callTimeOptions.map((option, idx) => (
+                      <option key={idx} value={option}>{option}</option>
+                    ))}
                   </select>
                 </div>
 
-                <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-[#00BCA2] to-[#007C62] text-white py-4 rounded-xl font-bold text-lg hover:from-[#00A58F] hover:to-[#006957] transition-all duration-300 disabled:opacity-50 shadow-lg">
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting} 
+                  className="w-full bg-[#FB923C] text-white py-4 rounded-xl font-black text-lg hover:bg-[#F97316] transition-all duration-300 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center gap-2">
                       <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
@@ -372,11 +434,11 @@ const ClientLandingPage = () => {
                       Sending Request...
                     </span>
                   ) : (
-                    'Send My Quote Request'
+                    'Send My Quote Request →'
                   )}
                 </button>
 
-                <p className="text-center text-xs text-gray-400">
+                <p className="text-center text-xs text-[#94A3B8]">
                   🔒 Secure submission — your details are protected with encrypted transport.
                   <br />A licensed agent will contact you to discuss tailored coverage options.
                 </p>
@@ -386,24 +448,48 @@ const ClientLandingPage = () => {
 
           {/* Bottom Section */}
           <div className="mt-12 text-center">
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-              <span>🏢 Licensed in all 50 states</span>
-              <span>🔒 Secure encrypted intake</span>
-              <span>📞 Fast response from licensed agents</span>
-              <span>⭐ Trusted by call centers nationwide</span>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-[#475569]">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
+                🏢 Licensed in all 50 states
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
+                🔒 Secure encrypted intake
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
+                📞 Fast response from licensed agents
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
+                ⭐ Trusted by call centers nationwide
+              </span>
             </div>
-            <div className="mt-6 pt-6 border-t border-white/10 text-xs text-gray-500">
-              © 2024 Artist Media. All rights reserved. | Privacy Policy | Terms of Service
+            <div className="mt-6 pt-6 border-t border-[#E8E5DF] text-xs text-[#94A3B8]">
+              © 2024 Artist Media. All rights reserved.
             </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .animate-spin { animation: spin 1s linear infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        .animate-pulse { animation: pulse 2s ease-in-out infinite; }
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+          animation: spin 1s linear infinite;
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.6; }
+        }
+        .animate-pulse {
+          animation: pulse 3s ease-in-out infinite;
+        }
+        .delay-1000 {
+          animation-delay: 1s;
+        }
       `}</style>
     </div>
   );

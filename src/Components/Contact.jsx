@@ -34,7 +34,6 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Insert lead into Supabase
       const { error } = await supabase
         .from('leads')
         .insert([
@@ -55,7 +54,6 @@ const Contact = () => {
         throw error;
       }
 
-      // If user opted for newsletter, add to subscribers
       if (formData.newsletter) {
         const { error: subError } = await supabase
           .from('subscribers')
@@ -89,7 +87,7 @@ const Contact = () => {
       setFormStatus({
         submitted: true,
         success: false,
-        message: 'Something went wrong. Please try again or call us directly at (833) 711-8975.'
+        message: 'Something went wrong. Please try again or call us directly at (313) 581-7026.'
       });
     } finally {
       setIsSubmitting(false);
@@ -115,19 +113,22 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#0F2B3D] to-[#1A4A6F] text-white py-24 overflow-hidden">
+    <div className="bg-[#F5F5F0] min-h-screen">
+      
+      {/* Hero Section - Soft Stone with Orange */}
+      <section className="relative bg-[#F5F5F0] py-24 overflow-hidden border-b border-[#E8E5DF]">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-[#00BCA2] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#00BCA2] rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[#FB923C] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#FB923C] rounded-full blur-3xl"></div>
         </div>
         <div className="relative container mx-auto px-4 text-center">
-          <div className="inline-block px-4 py-2 bg-[#00BCA2]/20 backdrop-blur-sm rounded-full mb-6 border border-[#00BCA2]/30">
-            <span className="text-[#00BCA2] text-sm font-semibold tracking-wider">GET IN TOUCH</span>
+          <div className="inline-block px-4 py-2 bg-[#FB923C]/10 backdrop-blur-sm rounded-full mb-6 border border-[#FB923C]/20">
+            <span className="text-[#FB923C] text-sm font-semibold tracking-wider">GET IN TOUCH</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's <span className="text-[#00BCA2]">Scale</span> Your Business</h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-black mb-6 text-[#1E293B]">
+            Let's <span className="text-[#FB923C]">Scale</span> Your Business
+          </h1>
+          <p className="text-xl text-[#475569] max-w-2xl mx-auto">
             Ready to transform your lead generation? Our team is here to help you achieve your goals.
           </p>
         </div>
@@ -139,121 +140,121 @@ const Contact = () => {
           
           {/* Contact Information - Left Side */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Main Contact Card */}
-            <div className="bg-gradient-to-br from-[#0F2B3D] to-[#1A4A6F] rounded-2xl shadow-xl p-8 text-white">
+            {/* Main Contact Card - Orange Theme */}
+            <div className="bg-[#1E293B] rounded-2xl shadow-xl p-8 text-white border border-[#2A3A4A]">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <span>📞</span> Contact Information
               </h3>
               <div className="space-y-5">
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-[#00BCA2] transition-colors duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-[#FB923C]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FB923C] transition-colors duration-300">
+                    <svg className="w-6 h-6 text-[#FB923C] group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-300">Phone (Toll-Free)</p>
-                    <a href="tel:+13135817026" className="text-xl font-semibold hover:text-[#00BCA2] transition">(313) 581-7026</a>
-                    <p className="text-xs text-gray-400 mt-1">Mon-Fri: 9am - 8pm EST</p>
+                    <p className="text-sm text-[#94A3B8]">Phone (Toll-Free)</p>
+                    <a href="tel:+13135817026" className="text-xl font-semibold hover:text-[#FB923C] transition">(313) 581-7026</a>
+                    <p className="text-xs text-[#64748B] mt-1">Mon-Fri: 9am - 8pm EST</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-[#00BCA2] transition-colors duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-[#FB923C]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FB923C] transition-colors duration-300">
+                    <svg className="w-6 h-6 text-[#FB923C] group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-300">Email</p>
-                    <a href="mailto:artistmedia.digital@gmail.com" className="hover:text-[#00BCA2] transition break-all">artistmedia.digital@gmail.com</a>
+                    <p className="text-sm text-[#94A3B8]">Email</p>
+                    <a href="mailto:artistmedia.digital@gmail.com" className="hover:text-[#FB923C] transition break-all">artistmedia.digital@gmail.com</a>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-[#00BCA2] transition-colors duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-[#FB923C]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FB923C] transition-colors duration-300">
+                    <svg className="w-6 h-6 text-[#FB923C] group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-300">Headquarters</p>
+                    <p className="text-sm text-[#94A3B8]">Headquarters</p>
                     <p className="font-medium">Michigan, USA</p>
-                    <p className="text-sm text-gray-400">United States</p>
+                    <p className="text-sm text-[#64748B]">United States</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Live Chat Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition">
+            <div className="bg-[#FAFAF8] rounded-2xl shadow-lg p-6 border border-[#E8E5DF] hover:shadow-xl transition">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center">
+                <div className="w-14 h-14 bg-[#FB923C]/10 rounded-full flex items-center justify-center">
                   <span className="text-2xl">💬</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800">Live Chat Support</h4>
-                  <p className="text-sm text-gray-500">Available 24/7 for urgent inquiries</p>
-                  <button className="text-[#00BCA2] text-sm font-semibold mt-1 hover:underline">Start Chat →</button>
+                  <h4 className="font-bold text-[#1E293B]">Live Chat Support</h4>
+                  <p className="text-sm text-[#475569]">Available 24/7 for urgent inquiries</p>
+                  <button className="text-[#FB923C] text-sm font-semibold mt-1 hover:text-[#F97316] transition">Start Chat →</button>
                 </div>
               </div>
             </div>
 
             {/* Business Hours Card */}
-            <div className="bg-gray-50 rounded-2xl p-6">
-              <h4 className="font-bold text-gray-800 mb-4 flex items-center gap-2">🕒 Business Hours</h4>
+            <div className="bg-[#FAFAF8] rounded-2xl p-6 border border-[#E8E5DF]">
+              <h4 className="font-bold text-[#1E293B] mb-4 flex items-center gap-2">🕒 Business Hours</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday</span>
-                  <span className="font-medium text-gray-800">9:00 AM - 8:00 PM EST</span>
+                  <span className="text-[#475569]">Monday - Friday</span>
+                  <span className="font-medium text-[#1E293B]">9:00 AM - 8:00 PM EST</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Saturday</span>
-                  <span className="font-medium text-gray-800">10:00 AM - 4:00 PM EST</span>
+                  <span className="text-[#475569]">Saturday</span>
+                  <span className="font-medium text-[#1E293B]">10:00 AM - 4:00 PM EST</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Sunday</span>
-                  <span className="font-medium text-gray-800">Closed</span>
+                  <span className="text-[#475569]">Sunday</span>
+                  <span className="font-medium text-[#1E293B]">Closed</span>
                 </div>
               </div>
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-xs text-gray-500">24/7 Support Available for Enterprise Clients</p>
+              <div className="mt-4 pt-4 border-t border-[#E8E5DF]">
+                <p className="text-xs text-[#94A3B8]">24/7 Support Available for Enterprise Clients</p>
               </div>
             </div>
 
-            {/* Trust Badges */}
+            {/* Trust Badges - Orange */}
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-              <div className="bg-white rounded-full px-4 py-2 shadow-sm border border-gray-100">
-                <span className="text-sm">🔒 DNC Compliant</span>
+              <div className="bg-[#FAFAF8] rounded-full px-4 py-2 shadow-sm border border-[#E8E5DF]">
+                <span className="text-sm text-[#475569]">🔒 DNC Compliant</span>
               </div>
-              <div className="bg-white rounded-full px-4 py-2 shadow-sm border border-gray-100">
-                <span className="text-sm">✓ TCPA Certified</span>
+              <div className="bg-[#FAFAF8] rounded-full px-4 py-2 shadow-sm border border-[#E8E5DF]">
+                <span className="text-sm text-[#475569]">✓ TCPA Certified</span>
               </div>
-              <div className="bg-white rounded-full px-4 py-2 shadow-sm border border-gray-100">
-                <span className="text-sm">⭐ 4.9/5 Rating</span>
+              <div className="bg-[#FAFAF8] rounded-full px-4 py-2 shadow-sm border border-[#E8E5DF]">
+                <span className="text-sm text-[#475569]">⭐ 4.9/5 Rating</span>
               </div>
             </div>
           </div>
 
           {/* Contact Form - Right Side */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-[#00BCA2] to-[#007C62] h-2"></div>
+            <div className="bg-[#FAFAF8] rounded-2xl shadow-xl border border-[#E8E5DF] overflow-hidden">
+              <div className="bg-[#FB923C] h-2"></div>
               <div className="p-6 md:p-8">
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Request a <span className="text-[#00BCA2]">Free Quote</span></h2>
-                  <p className="text-gray-500 mt-2">Fill out the form below and our team will respond within 24 hours</p>
+                  <h2 className="text-2xl md:text-3xl font-black text-[#1E293B]">Request a <span className="text-[#FB923C]">Free Quote</span></h2>
+                  <p className="text-[#475569] mt-2">Fill out the form below and our team will respond within 24 hours</p>
                 </div>
                 
                 {formStatus.submitted && (
-                  <div className={`mb-6 p-4 rounded-xl flex items-start gap-3 ${formStatus.success ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`}>
+                  <div className={`mb-6 p-4 rounded-xl flex items-start gap-3 ${formStatus.success ? 'bg-[#FB923C]/10 border border-[#FB923C]/20' : 'bg-red-50 border border-red-200'}`}>
                     <span className="text-2xl">{formStatus.success ? '✅' : '❌'}</span>
                     <div>
-                      <p className={`font-semibold ${formStatus.success ? 'text-green-800' : 'text-red-800'}`}>
+                      <p className={`font-semibold ${formStatus.success ? 'text-[#1E293B]' : 'text-red-800'}`}>
                         {formStatus.success ? 'Success!' : 'Error'}
                       </p>
-                      <p className={`text-sm ${formStatus.success ? 'text-green-600' : 'text-red-600'}`}>
+                      <p className={`text-sm ${formStatus.success ? 'text-[#475569]' : 'text-red-600'}`}>
                         {formStatus.message}
                       </p>
                     </div>
@@ -263,8 +264,8 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Full Name <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                        Full Name <span className="text-[#FB923C]">*</span>
                       </label>
                       <input
                         type="text"
@@ -272,13 +273,13 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition"
+                        className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Email Address <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                        Email Address <span className="text-[#FB923C]">*</span>
                       </label>
                       <input
                         type="email"
@@ -286,7 +287,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition"
+                        className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -294,8 +295,8 @@ const Contact = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Phone Number <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                        Phone Number <span className="text-[#FB923C]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -303,12 +304,12 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition"
+                        className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                         placeholder="(313) 581-7026"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-sm font-semibold text-[#1E293B] mb-2">
                         Company Name
                       </label>
                       <input
@@ -316,7 +317,7 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition"
+                        className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                         placeholder="Your Call Center"
                       />
                     </div>
@@ -324,15 +325,15 @@ const Contact = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Lead Vertical Interested In <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                        Lead Vertical Interested In <span className="text-[#FB923C]">*</span>
                       </label>
                       <select
                         name="vertical"
                         value={formData.vertical}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition bg-white"
+                        className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                       >
                         <option value="">Select a vertical</option>
                         {verticalOptions.map((option, idx) => (
@@ -341,14 +342,14 @@ const Contact = () => {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-sm font-semibold text-[#1E293B] mb-2">
                         Estimated Monthly Volume
                       </label>
                       <select
                         name="monthlyVolume"
                         value={formData.monthlyVolume}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition bg-white"
+                        className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                       >
                         <option value="">Select volume range</option>
                         {volumeOptions.map((option, idx) => (
@@ -359,8 +360,8 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Message <span className="text-red-500">*</span>
+                    <label className="block text-sm font-semibold text-[#1E293B] mb-2">
+                      Message <span className="text-[#FB923C]">*</span>
                     </label>
                     <textarea
                       name="message"
@@ -368,7 +369,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows="4"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#00BCA2] focus:border-transparent outline-none transition resize-none"
+                      className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition resize-none bg-white"
                       placeholder="Tell us about your call center, goals, and what you're looking for..."
                     ></textarea>
                   </div>
@@ -379,9 +380,9 @@ const Contact = () => {
                       name="newsletter"
                       checked={formData.newsletter}
                       onChange={handleChange}
-                      className="w-5 h-5 text-[#00BCA2] rounded border-gray-300 focus:ring-[#00BCA2]"
+                      className="w-5 h-5 text-[#FB923C] rounded border-[#E8E5DF] focus:ring-[#FB923C]"
                     />
-                    <label className="text-sm text-gray-600">
+                    <label className="text-sm text-[#475569]">
                       Subscribe to our newsletter for lead generation tips and industry insights
                     </label>
                   </div>
@@ -389,7 +390,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#00BCA2] text-white py-4 rounded-xl font-semibold text-lg hover:bg-[#008f7b] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    className="w-full bg-[#FB923C] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#F97316] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center gap-2">
@@ -404,7 +405,7 @@ const Contact = () => {
                     )}
                   </button>
                   
-                  <p className="text-xs text-gray-400 text-center">
+                  <p className="text-xs text-[#94A3B8] text-center">
                     By submitting this form, you agree to our privacy policy. We'll never share your information.
                   </p>
                 </form>
@@ -413,78 +414,84 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Why Choose Us Section */}
+        {/* Why Choose Us Section - Orange Theme */}
         <div className="mt-20">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Call Centers <span className="text-[#00BCA2]">Choose Artist Media</span></h2>
-            <div className="w-20 h-1 bg-[#00BCA2] mx-auto rounded-full"></div>
+            <div className="inline-block px-4 py-1 bg-[#FB923C]/10 rounded-full mb-4">
+              <span className="text-[#FB923C] text-sm font-semibold">WHY CHOOSE US</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-[#1E293B] mb-4">Why Call Centers <span className="text-[#FB923C]">Choose Artist Media</span></h2>
+            <div className="w-20 h-1 bg-[#FB923C] mx-auto rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition group">
-              <div className="w-16 h-16 bg-[#00BCA2]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00BCA2] transition">
+            <div className="bg-[#FAFAF8] rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition hover:-translate-y-1 border border-[#E8E5DF] group">
+              <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">📞</span>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Real-Time Delivery</h3>
-              <p className="text-sm text-gray-500">Leads delivered instantly to your agents in milliseconds</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">Real-Time Delivery</h3>
+              <p className="text-sm text-[#475569]">Leads delivered instantly to your agents in milliseconds</p>
             </div>
-            <div className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition group">
-              <div className="w-16 h-16 bg-[#00BCA2]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00BCA2] transition">
+            <div className="bg-[#FAFAF8] rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition hover:-translate-y-1 border border-[#E8E5DF] group">
+              <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">🔒</span>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">100% Compliant</h3>
-              <p className="text-sm text-gray-500">DNC & TCPA scrubbed leads for peace of mind</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">100% Compliant</h3>
+              <p className="text-sm text-[#475569]">DNC & TCPA scrubbed leads for peace of mind</p>
             </div>
-            <div className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition group">
-              <div className="w-16 h-16 bg-[#00BCA2]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00BCA2] transition">
+            <div className="bg-[#FAFAF8] rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition hover:-translate-y-1 border border-[#E8E5DF] group">
+              <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">💰</span>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Flexible Pricing</h3>
-              <p className="text-sm text-gray-500">Pay-per-call, CPL, or revenue share models</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">Flexible Pricing</h3>
+              <p className="text-sm text-[#475569]">Pay-per-call, CPL, or revenue share models</p>
             </div>
-            <div className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition group">
-              <div className="w-16 h-16 bg-[#00BCA2]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00BCA2] transition">
+            <div className="bg-[#FAFAF8] rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition hover:-translate-y-1 border border-[#E8E5DF] group">
+              <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">⭐</span>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Dedicated Support</h3>
-              <p className="text-sm text-gray-500">Personal account manager for every client</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">Dedicated Support</h3>
+              <p className="text-sm text-[#475569]">Personal account manager for every client</p>
             </div>
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12">
+        {/* FAQ Section - Soft Stone Theme */}
+        <div className="mt-20 bg-[#FAFAF8] rounded-2xl p-8 md:p-12 border border-[#E8E5DF]">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Frequently Asked <span className="text-[#00BCA2]">Questions</span></h2>
-            <div className="w-20 h-1 bg-[#00BCA2] mx-auto rounded-full"></div>
+            <div className="inline-block px-4 py-1 bg-[#FB923C]/10 rounded-full mb-4">
+              <span className="text-[#FB923C] text-sm font-semibold">FAQ</span>
+            </div>
+            <h2 className="text-3xl font-black text-[#1E293B] mb-4">Frequently Asked <span className="text-[#FB923C]">Questions</span></h2>
+            <div className="w-20 h-1 bg-[#FB923C] mx-auto rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-              <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-2">❓ How quickly can I start receiving leads?</h3>
-              <p className="text-gray-600 text-sm">Most clients start receiving leads within 24-48 hours after account setup and campaign configuration.</p>
+            <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ How quickly can I start receiving leads?</h3>
+              <p className="text-[#475569] text-sm">Most clients start receiving leads within 24-48 hours after account setup and campaign configuration.</p>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-              <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-2">❓ Are your leads compliant with DNC regulations?</h3>
-              <p className="text-gray-600 text-sm">Yes! All leads are scrubbed against National and State DNC registries, and we maintain full TCPA compliance.</p>
+            <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Are your leads compliant with DNC regulations?</h3>
+              <p className="text-[#475569] text-sm">Yes! All leads are scrubbed against National and State DNC registries, and we maintain full TCPA compliance.</p>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-              <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-2">❓ What verticals do you offer?</h3>
-              <p className="text-gray-600 text-sm">Auto Insurance, Medicare, Final Expense, Home Improvement, ACA/Obama Care, and more. Contact us for custom verticals.</p>
+            <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ What verticals do you offer?</h3>
+              <p className="text-[#475569] text-sm">Auto Insurance, Medicare, Final Expense, Home Improvement, ACA/Obama Care, and more. Contact us for custom verticals.</p>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
-              <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-2">❓ Is there a minimum budget requirement?</h3>
-              <p className="text-gray-600 text-sm">We work with call centers of all sizes. Contact us to discuss your budget and we'll find a solution that works for you.</p>
+            <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Is there a minimum budget requirement?</h3>
+              <p className="text-[#475569] text-sm">We work with call centers of all sizes. Contact us to discuss your budget and we'll find a solution that works for you.</p>
             </div>
           </div>
         </div>
 
-        {/* CTA Banner */}
-        <div className="mt-16 bg-gradient-to-r from-[#00BCA2] to-[#007C62] rounded-2xl p-8 md:p-12 text-center text-white">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">Ready to Scale Your Call Center?</h3>
-          <p className="text-white/90 mb-6 max-w-2xl mx-auto">Join 100+ successful call centers that trust Artist Media for premium, compliant leads.</p>
-          <a href="tel:+13135817026" className="inline-flex items-center gap-2 bg-white text-[#00BCA2] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
-            📞 Call Us Now: (152) 34567893
+        {/* CTA Banner - Orange Theme */}
+        <div className="mt-16 bg-[#1E293B] rounded-2xl p-8 md:p-12 text-center text-white border border-[#2A3A4A]">
+          <h3 className="text-2xl md:text-3xl font-black mb-3">Ready to Scale Your Call Center?</h3>
+          <p className="text-[#94A3B8] mb-6 max-w-2xl mx-auto">Join 100+ successful call centers that trust Artist Media for premium, compliant leads.</p>
+          <a href="tel:+13135817026" className="inline-flex items-center gap-2 bg-[#FB923C] text-white px-8 py-3 rounded-full font-bold hover:bg-[#F97316] transition shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            📞 Call Us Now: (313) 581-7026
           </a>
         </div>
       </div>
