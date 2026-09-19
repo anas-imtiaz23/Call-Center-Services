@@ -151,7 +151,7 @@ const ClientLandingPage = () => {
       console.error('Error:', error);
       setSubmitStatus({
         success: false,
-        message: '❌ Error submitting. Please call us directly: (313) 581-7026'
+        message: '❌ Error submitting. Please call us directly: 848-467-1057'
       });
     } finally {
       setIsSubmitting(false);
@@ -363,14 +363,14 @@ const ClientLandingPage = () => {
                   <label className="block text-sm font-semibold text-[#1E293B] mb-2">
                     Phone Number <span className="text-[#FB923C]">*</span>
                   </label>
-                  <input 
-                    type="tel" 
-                    name="phone" 
-                    value={formData.phone} 
-                    onChange={handleChange} 
-                    required 
-                    className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-[#FAFAF8]"
-                    placeholder="(313) 581-7026" 
+                    <input
+                      type="text"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="848-467-1057"
+                      className="w-full border border-[#E8E5DF] rounded-lg py-3 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#FB923C]/20"
+                    />
                   />
                   <p className="text-xs text-[#FB923C] mt-1">✓ USA licensed agents will call you</p>
                 </div>

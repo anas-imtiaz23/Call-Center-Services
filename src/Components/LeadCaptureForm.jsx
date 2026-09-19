@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 
 const LeadCaptureForm = () => {
-  const DID_NUMBER = "+1 (313) 581-7026";
+  const DID_NUMBER = "+1 (848) 467-1057";
   
   const [formData, setFormData] = useState({
     cxName: '',
@@ -138,7 +138,7 @@ const LeadCaptureForm = () => {
     } catch (error) {
       setSubmitStatus({
         success: false,
-        message: '❌ Something went wrong. Please try again or call us directly at (313) 581-7026.'
+        message: '❌ Something went wrong. Please try again or call us directly at 848-467-1057.'
       });
     } finally {
       setIsSubmitting(false);
@@ -313,7 +313,7 @@ const LeadCaptureForm = () => {
                       ? 'border-[#FB923C] shadow-lg shadow-[#FB923C]/20'
                       : 'border-[#E8E5DF] hover:border-[#FB923C]/50'
                   }`}
-                  placeholder="(313) 581-7026"
+                  placeholder="848-467-1057"
                 />
               </div>
               <p className="text-xs text-[#FB923C] mt-1 flex items-center gap-1">✓ USA licensed agents will call you</p>

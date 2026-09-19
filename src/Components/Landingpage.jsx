@@ -51,7 +51,7 @@ const LandingPage = () => {
                 Partner with licensed insurance professionals who provide personalized guidance, comprehensive coverage options, and transparent pricing — all tailored to your unique driving profile.
               </p>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4">
-                <a href="tel:+15234567893" className="inline-flex bg-[#FB923C] text-white font-bold text-xs sm:text-sm py-2.5 px-4 md:py-3.5 md:px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 hover:bg-[#F97316]">
+                <a href="tel:+18484671057" className="inline-flex bg-[#FB923C] text-white font-bold text-xs sm:text-sm py-2.5 px-4 md:py-3.5 md:px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 hover:bg-[#F97316]">
                   Speak With a Licensed Agent
                 </a>
                 <a href="#features" className="inline-flex bg-transparent text-[#FB923C] font-bold text-xs sm:text-sm py-2.5 px-4 md:py-3.5 md:px-6 rounded-full border-2 border-[#FB923C] hover:bg-[#FB923C] hover:text-white transition-all hover:-translate-y-1">
@@ -72,10 +72,10 @@ const LandingPage = () => {
               </div>
               <h2 className="text-xl md:text-2xl font-bold tracking-[-1px] text-[#1E293B]">Request Your Complimentary Quote</h2>
               <p className="mt-2 md:mt-3 mb-4 md:mb-6 text-[#475569] text-xs md:text-sm">Connect with a licensed agent for a no-obligation rate assessment.</p>
-              <a href="tel:+15234567893" className="block w-full bg-[#FB923C] text-white font-bold py-2.5 md:py-3.5 rounded-full mb-3 md:mb-5 hover:-translate-y-1 transition-all shadow-md hover:bg-[#F97316] text-sm md:text-base">
+              <a href="tel:+18484671057" className="block w-full bg-[#FB923C] text-white font-bold py-2.5 md:py-3.5 rounded-full mb-3 md:mb-5 hover:-translate-y-1 transition-all shadow-md hover:bg-[#F97316] text-sm md:text-base">
                 Call Now
               </a>
-              <div className="text-xl md:text-2xl font-black tracking-wide mb-3 md:mb-5 text-[#1E293B]">(523) 456-7893</div>
+              <div className="text-xl md:text-2xl font-black tracking-wide mb-3 md:mb-5 text-[#1E293B]">848-467-1057</div>
               <div className="pt-3 md:pt-4 border-t border-[#E8E5DF] text-[#94A3B8] text-[10px] md:text-xs font-semibold">Complimentary consultation • No obligation</div>
             </div>
           </div>
@@ -175,7 +175,7 @@ const LandingPage = () => {
           </div>
           
           <div className="mt-8 md:mt-10">
-            <a href="tel:+15234567893" className="inline-block bg-[#FB923C] text-white font-bold py-2.5 px-5 md:py-3.5 md:px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all hover:bg-[#F97316] text-sm md:text-base">
+            <a href="tel:+18484671057" className="inline-block bg-[#FB923C] text-white font-bold py-2.5 px-5 md:py-3.5 md:px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all hover:bg-[#F97316] text-sm md:text-base">
               Schedule Your Free Consultation
             </a>
           </div>
@@ -192,7 +192,7 @@ const LandingPage = () => {
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter mt-2 md:mt-3 text-[#1E293B] px-2">You May Qualify For Coverage If:</h2>
               <p className="text-[#475569] mt-2 md:mt-4 text-sm md:text-base leading-relaxed px-4 lg:px-0">Our flexible underwriting accommodates diverse driving situations across all 50 states.</p>
-              <a href="tel:+15234567893" className="inline-block mt-4 md:mt-6 bg-[#FB923C] text-white font-bold py-2 px-4 md:py-3.5 md:px-7 rounded-full shadow-md hover:-translate-y-1 transition-all hover:bg-[#F97316] text-sm md:text-base">
+              <a href="tel:+18484671057" className="inline-block mt-4 md:mt-6 bg-[#FB923C] text-white font-bold py-2 px-4 md:py-3.5 md:px-7 rounded-full shadow-md hover:-translate-y-1 transition-all hover:bg-[#F97316] text-sm md:text-base">
                 Verify Your Eligibility Now
               </a>
             </div>
@@ -311,7 +311,7 @@ const LandingPage = () => {
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black tracking-tighter mt-2 md:mt-3 text-[#1E293B] px-2">Stop Overpaying For Inadequate Coverage</h2>
             <p className="text-[#475569] text-sm md:text-base lg:text-lg mt-3 md:mt-5 px-4 lg:px-0">Secure quality protection at competitive rates with professional guidance every step of the way. Your satisfaction is guaranteed.</p>
             <div className="flex flex-wrap gap-3 md:gap-4 mt-4 md:mt-6 justify-center lg:justify-start">
-              <a href="tel:+15234567893" className="inline-block bg-[#FB923C] text-white font-bold py-2.5 px-5 md:py-4 md:px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all hover:bg-[#F97316] text-sm md:text-base">
+              <a href="tel:+18484671057" className="inline-block bg-[#FB923C] text-white font-bold py-2.5 px-5 md:py-4 md:px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all hover:bg-[#F97316] text-sm md:text-base">
                 Call Now For Your Rate Assessment
               </a>
             </div>
@@ -409,7 +409,7 @@ const LandingPage = () => {
 
       {/* Floating Buttons */}
       <div className="fixed bottom-4 md:bottom-6 right-3 md:right-5 z-50 flex flex-col gap-2 md:gap-3">
-        <a href="tel:+15234567893" className="bg-[#FB923C] text-white font-bold py-2 px-3 md:py-3 md:px-5 rounded-full shadow-lg flex items-center gap-1 md:gap-2 hover:bg-[#F97316] transition-all text-xs md:text-sm">
+        <a href="tel:+18484671057" className="bg-[#FB923C] text-white font-bold py-2 px-3 md:py-3 md:px-5 rounded-full shadow-lg flex items-center gap-1 md:gap-2 hover:bg-[#F97316] transition-all text-xs md:text-sm">
           📞 Call Now
         </a>
         <button onClick={scrollToTop} className="bg-white/80 backdrop-blur-sm text-[#1E293B] w-8 h-8 md:w-11 md:h-11 rounded-full text-base md:text-2xl shadow-md hover:bg-white transition-colors border border-[#E8E5DF]">
