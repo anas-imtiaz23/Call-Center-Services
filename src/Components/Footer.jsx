@@ -118,7 +118,7 @@ const Footer = () => {
                   <Icon name="phone" className="w-4 h-4 text-[#FB923C] group-hover:text-white transition" />
                 </div>
                 <a href="tel:+18484671057" className="text-sm text-[#94A3B8] hover:text-white transition-colors">
-                  848-467-1057
+                  +18484671057
                 </a>
               </li>
               <li className="flex items-center space-x-3 group">

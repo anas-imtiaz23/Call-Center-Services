@@ -151,7 +151,7 @@ const ClientLandingPage = () => {
       console.error('Error:', error);
       setSubmitStatus({
         success: false,
-        message: '❌ Error submitting. Please call us directly: 848-467-1057'
+        message: '❌ Error submitting. Please call us directly: +18484671057'
       });
     } finally {
       setIsSubmitting(false);
@@ -368,7 +368,7 @@ const ClientLandingPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="848-467-1057"
+                      placeholder="+18484671057"
                       className="w-full border border-[#E8E5DF] rounded-lg py-3 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#FB923C]/20"
                     />
                   />

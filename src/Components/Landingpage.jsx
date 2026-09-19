@@ -75,7 +75,7 @@ const LandingPage = () => {
               <a href="tel:+18484671057" className="block w-full bg-[#FB923C] text-white font-bold py-2.5 md:py-3.5 rounded-full mb-3 md:mb-5 hover:-translate-y-1 transition-all shadow-md hover:bg-[#F97316] text-sm md:text-base">
                 Call Now
               </a>
-              <div className="text-xl md:text-2xl font-black tracking-wide mb-3 md:mb-5 text-[#1E293B]">848-467-1057</div>
+              <div className="text-xl md:text-2xl font-black tracking-wide mb-3 md:mb-5 text-[#1E293B]">+18484671057</div>
               <div className="pt-3 md:pt-4 border-t border-[#E8E5DF] text-[#94A3B8] text-[10px] md:text-xs font-semibold">Complimentary consultation • No obligation</div>
             </div>
           </div>

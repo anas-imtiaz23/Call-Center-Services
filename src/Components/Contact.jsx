@@ -87,7 +87,7 @@ const Contact = () => {
       setFormStatus({
         submitted: true,
         success: false,
-        message: 'Something went wrong. Please try again or call us directly at 848-467-1057.'
+        message: 'Something went wrong. Please try again or call us directly at +18484671057.'
       });
     } finally {
       setIsSubmitting(false);
@@ -154,7 +154,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-[#94A3B8]">Phone (Toll-Free)</p>
-                    <a href="tel:+18484671057" className="text-xl font-semibold hover:text-[#FB923C] transition">848-467-1057</a>
+                    <a href="tel:+18484671057" className="text-xl font-semibold hover:text-[#FB923C] transition">+18484671057</a>
                     <p className="text-xs text-[#64748B] mt-1">Mon-Fri: 9am - 8pm EST</p>
                   </div>
                 </div>
@@ -305,7 +305,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
-                        placeholder="848-467-1057"
+                        placeholder="+18484671057"
                       />
                     </div>
                     <div>
@@ -491,7 +491,7 @@ const Contact = () => {
           <h3 className="text-2xl md:text-3xl font-black mb-3">Ready to Scale Your Call Center?</h3>
           <p className="text-[#94A3B8] mb-6 max-w-2xl mx-auto">Join 100+ successful call centers that trust Artist Media for premium, compliant leads.</p>
           <a href="tel:+18484671057" className="inline-flex items-center gap-2 bg-[#FB923C] text-white px-8 py-3 rounded-full font-bold hover:bg-[#F97316] transition shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-            📞 Call Us Now: 848-467-1057
+            📞 Call Us Now: +18484671057
           </a>
         </div>
       </div>
