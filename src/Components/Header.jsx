@@ -96,7 +96,9 @@ const Header = () => {
             {/* Desktop Right Section */}
             <div className="hidden lg:flex items-center space-x-4">
               <a 
-                href="tel:+18484671057" 
+                href="https://wa.me/18484671057" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-[#1E293B] hover:text-[#FB923C] transition group"
               >
                 <div className="w-9 h-9 bg-[#FB923C]/10 rounded-full flex items-center justify-center group-hover:bg-[#FB923C] transition">
@@ -125,7 +127,9 @@ const Header = () => {
               <span className="w-px h-6 bg-[#E8E5DF]"></span>
 
               <a 
-                href="tel:+18484671057" 
+                href="https://wa.me/18484671057" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#FB923C] text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-[#F97316] transition hover:-translate-y-0.5 shadow-md hover:shadow-lg flex items-center gap-2"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -200,7 +204,9 @@ const Header = () => {
             
             <div className="mt-4 pt-4 border-t border-[#E8E5DF] space-y-3">
               <a 
-                  href="tel:+18484671057" 
+                  href="https://wa.me/18484671057" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#1E293B] hover:text-[#FB923C] transition"
                 >
                 <div className="w-10 h-10 bg-[#FB923C]/10 rounded-full flex items-center justify-center">
@@ -225,7 +231,9 @@ const Header = () => {
                 </a>
                 
                 <a 
-                  href="tel:+18484671057" 
+                  href="https://wa.me/18484671057" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 bg-[#FB923C] text-white px-4 py-3 rounded-full font-bold text-center hover:bg-[#F97316] transition shadow-md hover:shadow-lg"
                 >
                   Call Now
