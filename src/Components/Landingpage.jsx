@@ -51,7 +51,7 @@ const LandingPage = () => {
                 Partner with licensed insurance professionals who provide personalized guidance, comprehensive coverage options, and transparent pricing — all tailored to your unique driving profile.
               </p>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4">
-                <a href="https://wa.me/18484671057" target="_blank" rel="noopener noreferrer" className="inline-flex bg-[#FB923C] text-white font-bold text-xs sm:text-sm py-2.5 px-4 md:py-3.5 md:px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 hover:bg-[#F97316]">
+                <a href="tel:+18484671057" className="inline-flex bg-[#FB923C] text-white font-bold text-xs sm:text-sm py-2.5 px-4 md:py-3.5 md:px-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 hover:bg-[#F97316]">
                   Speak With a Licensed Agent
                 </a>
                 <a href="#features" className="inline-flex bg-transparent text-[#FB923C] font-bold text-xs sm:text-sm py-2.5 px-4 md:py-3.5 md:px-6 rounded-full border-2 border-[#FB923C] hover:bg-[#FB923C] hover:text-white transition-all hover:-translate-y-1">
@@ -72,10 +72,10 @@ const LandingPage = () => {
               </div>
               <h2 className="text-xl md:text-2xl font-bold tracking-[-1px] text-[#1E293B]">Request Your Complimentary Quote</h2>
               <p className="mt-2 md:mt-3 mb-4 md:mb-6 text-[#475569] text-xs md:text-sm">Connect with a licensed agent for a no-obligation rate assessment.</p>
-              <a href="https://wa.me/18484671057" target="_blank" rel="noopener noreferrer" className="block w-full bg-[#FB923C] text-white font-bold py-2.5 md:py-3.5 rounded-full mb-3 md:mb-5 hover:-translate-y-1 transition-all shadow-md hover:bg-[#F97316] text-sm md:text-base">
+              <a href="tel:+18484671057" className="block w-full bg-[#FB923C] text-white font-bold py-2.5 md:py-3.5 rounded-full mb-3 md:mb-5 hover:-translate-y-1 transition-all shadow-md hover:bg-[#F97316] text-sm md:text-base">
                 Call Now
               </a>
-              <div className="text-xl md:text-2xl font-black tracking-wide mb-3 md:mb-5 text-[#1E293B]">+18484671057</div>
+              <a href="tel:+18484671057" className="block text-xl md:text-2xl font-black tracking-wide mb-3 md:mb-5 text-[#1E293B] hover:text-[#FB923C]">+18484671057</a>
               <div className="pt-3 md:pt-4 border-t border-[#E8E5DF] text-[#94A3B8] text-[10px] md:text-xs font-semibold">Complimentary consultation • No obligation</div>
             </div>
           </div>

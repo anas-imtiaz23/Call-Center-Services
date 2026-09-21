@@ -117,9 +117,12 @@ const Footer = () => {
                 <div className="w-9 h-9 bg-[#FB923C]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#FB923C] transition">
                   <Icon name="phone" className="w-4 h-4 text-[#FB923C] group-hover:text-white transition" />
                 </div>
-                <a href="https://wa.me/18484671057" target="_blank" rel="noopener noreferrer" className="text-sm text-[#94A3B8] hover:text-white transition-colors">
-                  +18484671057
-                </a>
+                <div className="text-sm text-[#94A3B8]">
+                  <span className="block">+18484671057</span>
+                  <a href="tel:+18484671057" className="text-[#FB923C] hover:text-white transition-colors">
+                    Call +18484671057
+                  </a>
+                </div>
               </li>
               <li className="flex items-center space-x-3 group">
                 <div className="w-9 h-9 bg-[#FB923C]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#FB923C] transition">
