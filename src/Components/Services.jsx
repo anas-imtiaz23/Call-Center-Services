@@ -62,59 +62,37 @@ const Services = () => {
       borderColor: 'border-[#FB923C]/30'
     },
     {
-      id: 'final',
-      icon: '⚰️',
-      title: 'Final Expense Leads',
-      description: 'Seniors seeking burial insurance and life insurance protection. High conversion rates for experienced agents.',
-      features: ['Age 50-85 targeting', 'Low monthly budgets', 'TCPA compliant', 'Exclusive territories', 'Live transfers available'],
-      volume: '25,000+ monthly',
-      conversion: '32% avg',
-      gradient: 'from-[#94A3B8]/20 to-[#64748B]/20',
-      borderColor: 'border-[#94A3B8]/30'
+      id: 'quotes',
+      icon: '💬',
+      title: 'Auto Insurance Quotes',
+      description: 'Connect drivers with licensed agents for fast, no-obligation auto insurance quote comparisons.',
+      features: ['Rate comparison', 'Licensed agents', 'Nationwide coverage', 'No-obligation quotes', 'Live transfers available'],
+      volume: '50,000+ monthly',
+      conversion: '28% avg',
+      gradient: 'from-[#FB923C]/20 to-[#F97316]/20',
+      borderColor: 'border-[#FB923C]/30'
     },
     {
-      id: 'medicare',
-      icon: '🏥',
-      title: 'Medicare Leads',
-      description: 'Seniors comparing Medicare Advantage, Supplement, and Part D plans during AEP and year-round.',
-      features: ['T65 prospects', 'AEP/OEP targeting', 'Supplement & Advantage', 'Income verified', 'Prescription needs'],
-      volume: '40,000+ monthly',
-      conversion: '35% avg',
-      gradient: 'from-[#F87171]/20 to-[#EF4444]/20',
-      borderColor: 'border-[#F87171]/30'
+      id: 'rates',
+      icon: '📊',
+      title: 'Car Insurance Rates',
+      description: 'Help drivers compare competitive car insurance rates based on vehicle, location, and driving history.',
+      features: ['Competitive rates', 'Zip code targeting', 'Driving history review', 'Flexible payment options', 'Fast quote delivery'],
+      volume: '50,000+ monthly',
+      conversion: '28% avg',
+      gradient: 'from-[#FB923C]/20 to-[#F97316]/20',
+      borderColor: 'border-[#FB923C]/30'
     },
     {
-      id: 'home',
-      icon: '🏠',
-      title: 'Home Improvement Leads',
-      description: 'Homeowners actively seeking roofing, solar, windows, bathroom remodeling, and HVAC services.',
-      features: ['Project-specific', 'Verified homeowners', 'High intent leads', 'Same-day delivery', 'Exclusive leads'],
-      volume: '35,000+ monthly',
-      conversion: '42% avg',
-      gradient: 'from-[#FCD34D]/20 to-[#F59E0B]/20',
-      borderColor: 'border-[#FCD34D]/30'
-    },
-    {
-      id: 'pest',
-      icon: '🐜',
-      title: 'Pest Control Leads',
-      description: 'Homeowners needing safe, effective pest inspection and elimination services nationwide.',
-      features: ['Roaches, mice, termites, ants, spiders', 'Owner-occupied home targeting', 'Inspection & treatment booked', 'EPA-approved solutions', 'Flexible scheduling'],
-      volume: '35,000+ monthly',
-      conversion: '38% avg',
-      gradient: 'from-[#6EE7B7]/20 to-[#34D399]/20',
-      borderColor: 'border-[#6EE7B7]/30'
-    },
-    {
-      id: 'aca',
+      id: 'coverage',
       icon: '🛡️',
-      title: 'Obama Care (ACA) Leads',
-      description: 'Health insurance seekers during open enrollment and SEP. Qualified leads for ACA marketplace plans.',
-      features: ['SEP & OEP', 'Income verified', 'Subsidy eligible', 'Family & individual', 'Live transfers'],
-      volume: '30,000+ monthly',
-      conversion: '30% avg',
-      gradient: 'from-[#6EE7B7]/20 to-[#10B981]/20',
-      borderColor: 'border-[#6EE7B7]/30'
+      title: 'Insurance Coverage',
+      description: 'Offer liability, comprehensive, collision, SR-22, and high-risk auto insurance coverage options.',
+      features: ['Liability coverage', 'Comprehensive plans', 'Collision protection', 'SR-22 filing', 'High-risk programs'],
+      volume: '50,000+ monthly',
+      conversion: '28% avg',
+      gradient: 'from-[#FB923C]/20 to-[#F97316]/20',
+      borderColor: 'border-[#FB923C]/30'
     }
   ];
 
@@ -147,7 +125,7 @@ const Services = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-[#1E293B]">Artist Media <span className="text-[#FB923C]">Solutions</span></h1>
           <p className="text-xl text-[#475569] max-w-3xl mx-auto mt-4">
-            Premium, compliant leads delivered in real-time. Scale your call center with our AI-powered platform across multiple verticals.
+            Premium Auto Insurance leads delivered in real-time. Connect drivers with licensed agents for competitive quotes and coverage.
           </p>
         </div>
       </section>
@@ -286,7 +264,7 @@ const Services = () => {
                     <span className="text-[#FB923C] text-xs font-semibold">FOR CALL CENTERS & AGENCIES</span>
                   </div>
                   <h3 className="text-2xl font-bold text-[#1E293B] mb-4">Buy High-Converting Leads</h3>
-                  <p className="text-[#475569] mb-6">Access premium, compliant leads across multiple verticals. Scale your call center with predictable volume and quality.</p>
+                  <p className="text-[#475569] mb-6">Access premium, compliant Auto Insurance leads and scale your quote campaigns with predictable volume and quality.</p>
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center gap-3"><span className="text-[#FB923C] text-xl">✓</span><span className="text-[#1E293B]">Real-time call routing</span></div>
                     <div className="flex items-center gap-3"><span className="text-[#FB923C] text-xl">✓</span><span className="text-[#1E293B]">DNC & TCPA compliant</span></div>

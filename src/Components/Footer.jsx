@@ -41,9 +41,11 @@ const Footer = () => {
     { name: 'Contact Us', url: '/contact' },
   ];
 
-  const industries = [
-    'Auto Insurance', 'Final Expense', 'Medicare',
-    'Home Improvement', 'Pest Control', 'Obama Care (ACA)'
+  const autoInsuranceLinks = [
+    { name: 'Auto Insurance Quotes', url: '/#auto-insurance-quotes' },
+    { name: 'Car Insurance Rates', url: '/#car-insurance-rates' },
+    { name: 'Cheap Auto Insurance', url: '/#cheap-auto-insurance' },
+    { name: 'Insurance Coverage', url: '/#insurance-coverage' }
   ];
 
   return (
@@ -98,13 +100,13 @@ const Footer = () => {
 
           {/* Industries Column */}
           <div>
-            <h4 className="text-white text-lg font-bold mb-4">Industries We Serve</h4>
+            <h4 className="text-white text-lg font-bold mb-4">Auto Insurance</h4>
             <div className="grid grid-cols-1 gap-2">
-              {industries.map((industry) => (
-                <span key={industry} className="text-sm text-[#94A3B8] hover:text-[#FB923C] transition-colors duration-300 cursor-default flex items-center">
+              {autoInsuranceLinks.map((link) => (
+                <Link key={link.name} to={link.url} className="text-sm text-[#94A3B8] hover:text-[#FB923C] transition-colors duration-300 flex items-center">
                   <span className="w-1 h-1 bg-[#FB923C]/30 rounded-full mr-2"></span>
-                  {industry}
-                </span>
+                  {link.name}
+                </Link>
               ))}
             </div>
           </div>

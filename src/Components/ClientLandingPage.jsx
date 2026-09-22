@@ -371,7 +371,6 @@ const ClientLandingPage = () => {
                       placeholder="+18484671057"
                       className="w-full border border-[#E8E5DF] rounded-lg py-3 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#FB923C]/20"
                     />
-                  />
                   <p className="text-xs text-[#FB923C] mt-1">✓ USA licensed agents will call you</p>
                 </div>
 

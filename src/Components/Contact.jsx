@@ -96,12 +96,10 @@ const Contact = () => {
 
   const verticalOptions = [
     'Auto Insurance',
-    'Medicare',
-    'Final Expense',
-    'Home Improvement',
-    'ACA / Obama Care',
-    'Multiple Verticals',
-    'Other'
+    'Auto Insurance Quotes',
+    'Car Insurance Rates',
+    'Cheap Auto Insurance',
+    'Insurance Coverage'
   ];
 
   const volumeOptions = [
@@ -154,7 +152,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-[#94A3B8]">Phone (Toll-Free)</p>
-                    <a href="https://wa.me/18484671057" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold hover:text-[#FB923C] transition">+18484671057</a>
+                    <a href="tel:+18484671057" className="text-xl font-semibold hover:text-[#FB923C] transition">+18484671057</a>
                     <p className="text-xs text-[#64748B] mt-1">Mon-Fri: 9am - 8pm EST</p>
                   </div>
                 </div>
@@ -477,7 +475,7 @@ const Contact = () => {
             </div>
             <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
               <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ What verticals do you offer?</h3>
-              <p className="text-[#475569] text-sm">Auto Insurance, Medicare, Final Expense, Home Improvement, ACA/Obama Care, and more. Contact us for custom verticals.</p>
+              <p className="text-[#475569] text-sm">Auto Insurance quotes, competitive car insurance rates, affordable coverage, and support for high-risk drivers.</p>
             </div>
             <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
               <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Is there a minimum budget requirement?</h3>

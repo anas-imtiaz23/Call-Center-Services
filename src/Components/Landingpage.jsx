@@ -25,7 +25,7 @@ const LandingPage = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden px-4 py-8 md:p-8 bg-[#F5F5F0]">
+      <section id="auto-insurance-quotes" className="relative min-h-screen flex items-center overflow-hidden px-4 py-8 md:p-8 bg-[#F5F5F0]">
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-gradient-to-r from-[#F5F5F0]/90 via-[#F5F5F0]/70 to-[#FAFAF8]/50 z-10"></div>
           <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(135deg, #F5F5F0 0%, #FAFAF8 50%, #F0F2F0 100%)' }} />
@@ -83,7 +83,7 @@ const LandingPage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-[#FAFAF8]">
+      <section id="car-insurance-rates" className="py-12 md:py-20 px-4 md:px-8 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 md:order-1 text-center md:text-left">
             <div className="inline-block px-3 py-1 md:px-4 bg-[#FB923C]/10 rounded-full mb-3 md:mb-4">
@@ -116,7 +116,7 @@ const LandingPage = () => {
       </section>
 
       {/* Steps */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-[#F5F5F0]">
+      <section id="insurance-coverage" className="py-12 md:py-20 px-4 md:px-8 bg-[#F5F5F0]">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-block px-3 py-1 md:px-4 bg-[#FB923C]/10 rounded-full mb-3 md:mb-4">
             <span className="text-[#FB923C] text-xs md:text-sm font-semibold">STREAMLINED PROCESS</span>
@@ -215,7 +215,7 @@ const LandingPage = () => {
       </section>
 
       {/* Coverage Plans */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-[#F5F5F0]">
+      <section id="cheap-auto-insurance" className="py-12 md:py-20 px-4 md:px-8 bg-[#F5F5F0]">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-block px-3 py-1 md:px-4 bg-[#FB923C]/10 rounded-full mb-3 md:mb-4">
             <span className="text-[#FB923C] text-xs md:text-sm font-semibold">PROTECTION OPTIONS</span>

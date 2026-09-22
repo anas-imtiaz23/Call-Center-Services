@@ -49,40 +49,28 @@ const About = () => {
 
   const verticals = [
     {
-      title: 'Auto Insurance',
+      title: 'Auto Insurance Quotes',
       icon: '🚗',
-      description: 'High-intent drivers actively seeking affordable coverage. Real-time transfers and exclusive leads with DNC compliance.',
-      features: ['Real-time transfers', 'Live & aged leads', 'Nationwide coverage']
+      description: 'High-intent drivers comparing affordable auto insurance coverage from licensed agents.',
+      features: ['Rate comparison', 'Live transfers', 'Nationwide coverage']
     },
     {
-      title: 'Final Expense',
-      icon: '⚰️',
-      description: 'Seniors seeking burial insurance and life insurance protection. High conversion rates for experienced agents.',
-      features: ['Aged 50-85', 'Low monthly budgets', 'TCPA compliant']
+      title: 'Car Insurance Rates',
+      icon: '📊',
+      description: 'Competitive car insurance rate requests matched to each driver\'s vehicle and driving profile.',
+      features: ['Zip code targeting', 'Driving history review', 'Fast quote delivery']
     },
     {
-      title: 'Medicare',
-      icon: '🏥',
-      description: 'Seniors comparing Medicare Advantage, Supplement, and Part D plans during AEP and year-round.',
-      features: ['T65 prospects', 'AEP/ OEP targeting', 'Supplement & Advantage']
+      title: 'Cheap Auto Insurance',
+      icon: '💰',
+      description: 'Affordable coverage options and flexible payment plans for budget-conscious drivers.',
+      features: ['Low monthly options', 'Payment flexibility', 'No-obligation quotes']
     },
     {
-      title: 'Home Improvement',
-      icon: '🏠',
-      description: 'Homeowners actively seeking roofing, solar, windows, bathroom remodeling, and HVAC services.',
-      features: ['Project-specific', 'Verified homeowners', 'High intent leads']
-    },
-    {
-      title: 'Pest Control',
-      icon: '🐜',
-      description: 'Homeowners needing safe, effective pest inspection and elimination services nationwide.',
-      features: ['Roaches, mice, termites, ants, spiders', 'Owner-occupied home targeting', 'Inspection appointments booked']
-    },
-    {
-      title: 'Obama Care (ACA)',
+      title: 'Insurance Coverage',
       icon: '🛡️',
-      description: 'Health insurance seekers during open enrollment and SEP. Qualified leads for ACA marketplace plans.',
-      features: ['SEP & OEP', 'Income verified', 'Subsidy eligible']
+      description: 'Liability, comprehensive, collision, SR-22, and high-risk auto insurance coverage solutions.',
+      features: ['Liability plans', 'Comprehensive coverage', 'SR-22 filing']
     }
   ];
 
@@ -139,7 +127,7 @@ const About = () => {
             About <span className="text-[#FB923C]">Artist Media</span>
           </h1>
           <p className="text-xl md:text-2xl text-[#475569] max-w-3xl mx-auto leading-relaxed">
-            Connecting consumers with trusted agents — empowering call centers with premium, compliant leads across Auto, Medicare, Final Expense, Home Improvement, and ACA.
+            Connecting drivers with trusted agents through premium, compliant Auto Insurance quote and call campaigns.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <div className="bg-[#FAFAF8] rounded-full px-6 py-2 text-sm font-medium text-[#1E293B] border border-[#E8E5DF] shadow-sm">🚗 2M+ Leads Delivered</div>
@@ -159,7 +147,7 @@ const About = () => {
             <h2 className="text-3xl md:text-5xl font-black text-[#1E293B] mb-4">Why <span className="text-[#FB923C]">Choose Us?</span></h2>
             <div className="w-24 h-1 bg-[#FB923C] mx-auto mb-6"></div>
             <p className="text-lg md:text-xl text-[#475569] leading-relaxed">
-              We understand that every call center has unique needs. That's why we offer customized lead solutions across multiple verticals to fit your sales process and budget.
+              We understand that every Auto Insurance campaign has unique needs. That's why we offer customized quote and call solutions to fit your sales process and budget.
             </p>
           </div>
 
@@ -174,7 +162,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#1E293B] mb-2">Customized Solutions</h3>
-                    <p className="text-[#475569]">Whether you need basic buyer interest or comprehensive real-time transfers, our expert team helps every step of the way — across all verticals.</p>
+                    <p className="text-[#475569]">Whether you need quote requests or real-time transfers, our expert team helps every step of the Auto Insurance campaign.</p>
                   </div>
                 </div>
               </div>
@@ -187,7 +175,7 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#1E293B] mb-2">Trusted Industry Partners</h3>
-                    <p className="text-[#475569]">With years of industry experience, we've partnered with top-rated insurance carriers, Medicare providers, and home improvement networks.</p>
+                    <p className="text-[#475569]">With years of industry experience, we've built compliant Auto Insurance campaigns around licensed agents and trusted carrier options.</p>
                   </div>
                 </div>
               </div>
@@ -197,7 +185,7 @@ const About = () => {
                 <div className="text-center">
                   <div className="text-5xl mb-4">📞🚀</div>
                   <h3 className="text-2xl font-bold text-[#1E293B] mb-3">Start Your Journey to High-Quality Leads!</h3>
-                  <p className="text-[#475569] mb-6">Complete a quick form and get a free, no-obligation quote. Protect your call center revenue, save on acquisition costs, and scale with peace of mind across all verticals.</p>
+                  <p className="text-[#475569] mb-6">Complete a quick form and get a free, no-obligation Auto Insurance quote. Connect qualified drivers with licensed agents.</p>
                   <button onClick={handleGetFreeQuote} className="inline-block bg-[#FB923C] text-white px-8 py-3 rounded-full font-bold hover:bg-[#F97316] transition shadow-lg hover:shadow-xl">Get Your Free Quote →</button>
                 </div>
               </div>
