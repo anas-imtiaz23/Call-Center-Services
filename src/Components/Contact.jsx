@@ -67,7 +67,7 @@ const Contact = () => {
       setFormStatus({
         submitted: true,
         success: true,
-        message: 'Thank you! Our team will contact you within 24 hours.'
+        message: 'Thank you. Your inquiry has been received; response times may vary.'
       });
       
       setFormData({
@@ -95,19 +95,18 @@ const Contact = () => {
   };
 
   const verticalOptions = [
-    'Auto Insurance',
-    'Auto Insurance Quotes',
-    'Car Insurance Rates',
-    'Cheap Auto Insurance',
-    'Insurance Coverage'
+    'Website information',
+    'Auto insurance topic',
+    'Advertising disclosure',
+    'Privacy question',
+    'Other'
   ];
 
   const volumeOptions = [
-    'Under 500 leads/month',
-    '500 - 2,000 leads/month',
-    '2,000 - 5,000 leads/month',
-    '5,000 - 10,000 leads/month',
-    '10,000+ leads/month'
+    'General question',
+    'Content correction',
+    'Privacy request',
+    'Business inquiry'
   ];
 
   return (
@@ -121,13 +120,13 @@ const Contact = () => {
         </div>
         <div className="relative container mx-auto px-4 text-center">
           <div className="inline-block px-4 py-2 bg-[#FB923C]/10 backdrop-blur-sm rounded-full mb-6 border border-[#FB923C]/20">
-            <span className="text-[#FB923C] text-sm font-semibold tracking-wider">GET IN TOUCH</span>
+            <span className="text-[#FB923C] text-sm font-semibold tracking-wider">CONTACT ZARVANTAMEDIA</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black mb-6 text-[#1E293B]">
-            Let's <span className="text-[#FB923C]">Scale</span> Your Business
+            Questions About <span className="text-[#FB923C]">Auto Insurance?</span>
           </h1>
           <p className="text-xl text-[#475569] max-w-2xl mx-auto">
-            Ready to transform your lead generation? Our team is here to help you achieve your goals.
+            Send a general inquiry about this website or its auto insurance information. We are not an insurance company and cannot determine coverage or rates.
           </p>
         </div>
       </section>
@@ -151,7 +150,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-[#94A3B8]">Phone (Toll-Free)</p>
+                    <p className="text-sm text-[#94A3B8]">Phone</p>
                     <a href="tel:+18484671057" className="text-xl font-semibold hover:text-[#FB923C] transition">+18484671057</a>
                     <p className="text-xs text-[#64748B] mt-1">Mon-Fri: 9am - 8pm EST</p>
                   </div>
@@ -192,45 +191,45 @@ const Contact = () => {
                   <span className="text-2xl">💬</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#1E293B]">Live Chat Support</h4>
-                  <p className="text-sm text-[#475569]">Available 24/7 for urgent inquiries</p>
-                  <button className="text-[#FB923C] text-sm font-semibold mt-1 hover:text-[#F97316] transition">Start Chat →</button>
+                  <h4 className="font-bold text-[#1E293B]">Email Inquiries</h4>
+                  <p className="text-sm text-[#475569]">For general questions, contact us by email.</p>
+                  <a href="mailto:artistmedia.digital@gmail.com" className="text-[#FB923C] text-sm font-semibold mt-1 hover:text-[#F97316] transition">Send an email →</a>
                 </div>
               </div>
             </div>
 
             {/* Business Hours Card */}
             <div className="bg-[#FAFAF8] rounded-2xl p-6 border border-[#E8E5DF]">
-              <h4 className="font-bold text-[#1E293B] mb-4 flex items-center gap-2">🕒 Business Hours</h4>
+              <h4 className="font-bold text-[#1E293B] mb-4 flex items-center gap-2">🕒 Contact Hours</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-[#475569]">Monday - Friday</span>
-                  <span className="font-medium text-[#1E293B]">9:00 AM - 8:00 PM EST</span>
+                  <span className="font-medium text-[#1E293B]">Response times vary</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#475569]">Saturday</span>
-                  <span className="font-medium text-[#1E293B]">10:00 AM - 4:00 PM EST</span>
+                  <span className="font-medium text-[#1E293B]">Email is available</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#475569]">Sunday</span>
-                  <span className="font-medium text-[#1E293B]">Closed</span>
+                  <span className="font-medium text-[#1E293B]">No fixed response time</span>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-[#E8E5DF]">
-                <p className="text-xs text-[#94A3B8]">24/7 Support Available for Enterprise Clients</p>
+                <p className="text-xs text-[#94A3B8]">Response times may vary.</p>
               </div>
             </div>
 
             {/* Trust Badges - Orange */}
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               <div className="bg-[#FAFAF8] rounded-full px-4 py-2 shadow-sm border border-[#E8E5DF]">
-                <span className="text-sm text-[#475569]">🔒 DNC Compliant</span>
+                  <span className="text-sm text-[#475569]">Independent information resource</span>
               </div>
               <div className="bg-[#FAFAF8] rounded-full px-4 py-2 shadow-sm border border-[#E8E5DF]">
-                <span className="text-sm text-[#475569]">✓ TCPA Certified</span>
+                <span className="text-sm text-[#475569]">Provider terms may vary</span>
               </div>
               <div className="bg-[#FAFAF8] rounded-full px-4 py-2 shadow-sm border border-[#E8E5DF]">
-                <span className="text-sm text-[#475569]">⭐ 4.9/5 Rating</span>
+                <span className="text-sm text-[#475569]">No insurer affiliation implied</span>
               </div>
             </div>
           </div>
@@ -241,8 +240,8 @@ const Contact = () => {
               <div className="bg-[#FB923C] h-2"></div>
               <div className="p-6 md:p-8">
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl md:text-3xl font-black text-[#1E293B]">Request a <span className="text-[#FB923C]">Free Quote</span></h2>
-                  <p className="text-[#475569] mt-2">Fill out the form below and our team will respond within 24 hours</p>
+                  <h2 className="text-2xl md:text-3xl font-black text-[#1E293B]">Send a <span className="text-[#FB923C]">General Inquiry</span></h2>
+                  <p className="text-[#475569] mt-2">Use this form to contact ZarvantaMedia. Submission does not request or guarantee an insurance quote.</p>
                 </div>
                 
                 {formStatus.submitted && (
@@ -308,7 +307,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-[#1E293B] mb-2">
-                        Company Name
+                        Organization (optional)
                       </label>
                       <input
                         type="text"
@@ -316,7 +315,7 @@ const Contact = () => {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
-                        placeholder="Your Call Center"
+                        placeholder="Organization"
                       />
                     </div>
                   </div>
@@ -324,7 +323,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm font-semibold text-[#1E293B] mb-2">
-                        Lead Vertical Interested In <span className="text-[#FB923C]">*</span>
+                        Inquiry topic <span className="text-[#FB923C]">*</span>
                       </label>
                       <select
                         name="vertical"
@@ -333,7 +332,7 @@ const Contact = () => {
                         required
                         className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                       >
-                        <option value="">Select a vertical</option>
+                        <option value="">Select a topic</option>
                         {verticalOptions.map((option, idx) => (
                           <option key={idx} value={option}>{option}</option>
                         ))}
@@ -341,7 +340,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-[#1E293B] mb-2">
-                        Estimated Monthly Volume
+                        Inquiry type
                       </label>
                       <select
                         name="monthlyVolume"
@@ -349,7 +348,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition bg-white"
                       >
-                        <option value="">Select volume range</option>
+                        <option value="">Select an inquiry type</option>
                         {volumeOptions.map((option, idx) => (
                           <option key={idx} value={option}>{option}</option>
                         ))}
@@ -368,7 +367,7 @@ const Contact = () => {
                       required
                       rows="4"
                       className="w-full px-4 py-3 border border-[#E8E5DF] rounded-xl focus:ring-2 focus:ring-[#FB923C] focus:border-transparent outline-none transition resize-none bg-white"
-                      placeholder="Tell us about your call center, goals, and what you're looking for..."
+                      placeholder="Share your question or feedback..."
                     ></textarea>
                   </div>
                   
@@ -381,7 +380,7 @@ const Contact = () => {
                       className="w-5 h-5 text-[#FB923C] rounded border-[#E8E5DF] focus:ring-[#FB923C]"
                     />
                     <label className="text-sm text-[#475569]">
-                      Subscribe to our newsletter for lead generation tips and industry insights
+                      Send me occasional updates about auto insurance information
                     </label>
                   </div>
                   
@@ -399,12 +398,12 @@ const Contact = () => {
                         Submitting...
                       </span>
                     ) : (
-                      'Get Your Free Quote →'
+                      'Send Inquiry →'
                     )}
                   </button>
                   
                   <p className="text-xs text-[#94A3B8] text-center">
-                    By submitting this form, you agree to our privacy policy. We'll never share your information.
+                    We use the details you submit to respond to your inquiry. Do not include sensitive personal or financial information.
                   </p>
                 </form>
               </div>
@@ -418,7 +417,7 @@ const Contact = () => {
             <div className="inline-block px-4 py-1 bg-[#FB923C]/10 rounded-full mb-4">
               <span className="text-[#FB923C] text-sm font-semibold">WHY CHOOSE US</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-black text-[#1E293B] mb-4">Why Call Centers <span className="text-[#FB923C]">Choose Artist Media</span></h2>
+            <h2 className="text-3xl md:text-4xl font-black text-[#1E293B] mb-4">What This <span className="text-[#FB923C]">Website Provides</span></h2>
             <div className="w-20 h-1 bg-[#FB923C] mx-auto rounded-full"></div>
           </div>
           
@@ -427,29 +426,29 @@ const Contact = () => {
               <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">📞</span>
               </div>
-              <h3 className="font-bold text-[#1E293B] mb-2">Real-Time Delivery</h3>
-              <p className="text-sm text-[#475569]">Leads delivered instantly to your agents in milliseconds</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">General Information</h3>
+              <p className="text-sm text-[#475569]">This website shares general auto insurance information.</p>
             </div>
             <div className="bg-[#FAFAF8] rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition hover:-translate-y-1 border border-[#E8E5DF] group">
               <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">🔒</span>
               </div>
-              <h3 className="font-bold text-[#1E293B] mb-2">100% Compliant</h3>
-              <p className="text-sm text-[#475569]">DNC & TCPA scrubbed leads for peace of mind</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">Independent Website</h3>
+              <p className="text-sm text-[#475569]">ZarvantaMedia is not an insurer or government agency.</p>
             </div>
             <div className="bg-[#FAFAF8] rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition hover:-translate-y-1 border border-[#E8E5DF] group">
               <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">💰</span>
               </div>
-              <h3 className="font-bold text-[#1E293B] mb-2">Flexible Pricing</h3>
-              <p className="text-sm text-[#475569]">Pay-per-call, CPL, or revenue share models</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">Provider Terms</h3>
+              <p className="text-sm text-[#475569]">Rates, terms, and eligibility are set by each provider.</p>
             </div>
             <div className="bg-[#FAFAF8] rounded-xl p-6 text-center shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition hover:-translate-y-1 border border-[#E8E5DF] group">
               <div className="w-16 h-16 bg-[#FB923C]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FB923C] transition">
                 <span className="text-2xl group-hover:text-white transition">⭐</span>
               </div>
-              <h3 className="font-bold text-[#1E293B] mb-2">Dedicated Support</h3>
-              <p className="text-sm text-[#475569]">Personal account manager for every client</p>
+              <h3 className="font-bold text-[#1E293B] mb-2">No Guarantees</h3>
+              <p className="text-sm text-[#475569]">Quotes, savings, coverage, and approval are not guaranteed.</p>
             </div>
           </div>
         </div>
@@ -466,28 +465,28 @@ const Contact = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
-              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ How quickly can I start receiving leads?</h3>
-              <p className="text-[#475569] text-sm">Most clients start receiving leads within 24-48 hours after account setup and campaign configuration.</p>
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Is this an insurance company?</h3>
+              <p className="text-[#475569] text-sm">No. ZarvantaMedia does not issue policies or decide provider rates, terms, or eligibility.</p>
             </div>
             <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
-              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Are your leads compliant with DNC regulations?</h3>
-              <p className="text-[#475569] text-sm">Yes! All leads are scrubbed against National and State DNC registries, and we maintain full TCPA compliance.</p>
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Does ZarvantaMedia sell insurance?</h3>
+              <p className="text-[#475569] text-sm">No. ZarvantaMedia is an independent informational and marketing website, not an insurer. Any provider you contact sets its own terms and eligibility.</p>
             </div>
             <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
-              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ What verticals do you offer?</h3>
-              <p className="text-[#475569] text-sm">Auto Insurance quotes, competitive car insurance rates, affordable coverage, and support for high-risk drivers.</p>
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Are the details the same in every state?</h3>
+              <p className="text-[#475569] text-sm">No. Laws and available products vary by location. Check with your state insurance department and provider.</p>
             </div>
             <div className="bg-[#F5F5F0] rounded-xl p-6 shadow-[0_4px_12px_rgba(30,41,59,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(30,41,59,0.12)] transition border border-[#E8E5DF]">
-              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Is there a minimum budget requirement?</h3>
-              <p className="text-[#475569] text-sm">We work with call centers of all sizes. Contact us to discuss your budget and we'll find a solution that works for you.</p>
+              <h3 className="font-bold text-[#1E293B] mb-2 flex items-center gap-2">❓ Can you recommend a policy?</h3>
+              <p className="text-[#475569] text-sm">We cannot recommend or bind coverage. Contact a licensed insurance professional for advice about your situation.</p>
             </div>
           </div>
         </div>
 
         {/* CTA Banner - Orange Theme */}
         <div className="mt-16 bg-[#1E293B] rounded-2xl p-8 md:p-12 text-center text-white border border-[#2A3A4A]">
-          <h3 className="text-2xl md:text-3xl font-black mb-3">Ready to Scale Your Call Center?</h3>
-          <p className="text-[#94A3B8] mb-6 max-w-2xl mx-auto">Join 100+ successful call centers that trust Artist Media for premium, compliant leads.</p>
+          <h3 className="text-2xl md:text-3xl font-black mb-3">Need to Reach ZarvantaMedia?</h3>
+          <p className="text-[#94A3B8] mb-6 max-w-2xl mx-auto">Use the contact details above for general website inquiries. For policy questions, contact your insurer.</p>
           <a href="https://wa.me/18484671057" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#FB923C] text-white px-8 py-3 rounded-full font-bold hover:bg-[#F97316] transition shadow-lg hover:shadow-xl hover:-translate-y-0.5">
             📞 Call Us Now: +18484671057
           </a>

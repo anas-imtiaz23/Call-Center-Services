@@ -135,7 +135,7 @@ const ClientLandingPage = () => {
       
       setSubmitStatus({
         success: true,
-        message: '✓ Thank you! A licensed USA agent will call you within 5 minutes.'
+        message: 'Thank you. Your request has been received; response times may vary.'
       });
       
       setFormData({
@@ -191,19 +191,19 @@ const ClientLandingPage = () => {
           <div className="flex flex-wrap justify-center gap-6 text-xs text-[#475569]">
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
-              🔒 256-bit SSL Encryption
+              Independent information resource
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
-              ✓ Fully DNC & TCPA Compliant
+              Provider terms and availability vary
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
-              📞 USA Licensed Agents
+              Not an insurance company
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 bg-[#FB923C] rounded-full"></span>
-              ⭐ 4.9/5 Rating (2,500+ Reviews)
+              No quote or savings guarantee
             </span>
           </div>
         </div>
@@ -219,13 +219,13 @@ const ClientLandingPage = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FB923C] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FB923C]"></span>
               </span>
-              <span className="text-[#FB923C] text-sm font-semibold tracking-wide">🇺🇸 Licensed U.S. Insurance Advisors</span>
+              <span className="text-[#FB923C] text-sm font-semibold tracking-wide">INDEPENDENT AUTO INSURANCE INFORMATION</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1E293B] mb-4 tracking-tight">
-              Premium Insurance Quotes <br className="hidden sm:block"/><span className="text-[#FB923C]">Delivered with Confidence</span>
+              Understand Insurance Options <br className="hidden sm:block"/><span className="text-[#FB923C]">Before You Decide</span>
             </h1>
             <p className="text-[#475569] text-lg max-w-2xl mx-auto">
-              Connect with licensed USA agents to compare the most competitive auto, healthcare, and specialty insurance options — fast, secure, and compliant.
+              Submit a request to be contacted about insurance options. Providers determine rates, eligibility, terms, and availability; no quote or savings is guaranteed.
             </p>
           </div>
 
@@ -291,28 +291,28 @@ const ClientLandingPage = () => {
                   <div className="w-8 h-8 bg-[#FB923C]/10 rounded-full flex items-center justify-center">
                     <span className="text-[#FB923C]">✅</span>
                   </div>
-                  <h3 className="text-[#1E293B] font-bold text-lg">Why Clients Choose Artist Media</h3>
+                  <h3 className="text-[#1E293B] font-bold text-lg">Before You Submit</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">🏆</div>
-                    <div className="text-[#1E293B] font-semibold text-sm">Top-rated Service</div>
-                    <div className="text-[#475569] text-xs">Trusted by 100+ call centers</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">Independent resource</div>
+                    <div className="text-[#475569] text-xs">Not an insurer or government agency</div>
                   </div>
                   <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">🔒</div>
-                    <div className="text-[#1E293B] font-semibold text-sm">Strict Compliance</div>
-                    <div className="text-[#475569] text-xs">TCPA & DNC safe</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">Provider terms vary</div>
+                    <div className="text-[#475569] text-xs">Confirm details directly with providers</div>
                   </div>
                   <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">⚡</div>
-                    <div className="text-[#1E293B] font-semibold text-sm">Rapid Response</div>
-                    <div className="text-[#475569] text-xs">Quote matching in minutes</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">No fixed response time</div>
+                    <div className="text-[#475569] text-xs">Availability depends on providers</div>
                   </div>
                   <div className="text-center p-3 bg-[#F5F5F0] rounded-xl border border-[#E8E5DF]">
                     <div className="text-2xl">💰</div>
-                    <div className="text-[#1E293B] font-semibold text-sm">Competitive Quotes</div>
-                    <div className="text-[#475569] text-xs">Access to leading carriers</div>
+                    <div className="text-[#1E293B] font-semibold text-sm">No quote guarantee</div>
+                    <div className="text-[#475569] text-xs">Rates and eligibility are not guaranteed</div>
                   </div>
                 </div>
               </div>
@@ -321,18 +321,18 @@ const ClientLandingPage = () => {
               <div className="bg-gradient-to-r from-[#FB923C]/15 to-[#F97316]/15 rounded-2xl p-5 border border-[#FB923C]/20 text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  <span className="text-[#1E293B] text-sm font-bold">🟢 Licensed Agents Available Now</span>
+                  <span className="text-[#1E293B] text-sm font-bold">Third-party contact may follow</span>
                 </div>
-                <p className="text-[#475569] text-sm">Average connection time: <span className="text-[#1E293B] font-bold">under 1 minute</span></p>
-                <p className="text-[#94A3B8] text-xs mt-2">🇺🇸 Licensed USA agents · Secure, compliant service</p>
+                <p className="text-[#475569] text-sm">Providers determine whether they can respond and when.</p>
+                <p className="text-[#94A3B8] text-xs mt-2">No policy, rate, eligibility, or approval is guaranteed.</p>
               </div>
             </div>
 
             {/* RIGHT COLUMN - Trusted Form */}
             <div className="bg-white rounded-2xl shadow-[0_10px_30px_-10px_rgba(30,41,59,0.08)] overflow-hidden border border-[#E8E5DF]">
               <div className="bg-gradient-to-r from-[#FB923C] to-[#F97316] px-6 py-5">
-                <h2 className="text-white text-2xl font-black">Request a Tailored Quote</h2>
-                <p className="text-white/80 text-sm">Submit your details and our licensed team will prepare your best available options.</p>
+                <h2 className="text-white text-2xl font-black">Request Information</h2>
+                <p className="text-white/80 text-sm">Submit your details to request contact about insurance options. ZarvantaMedia does not issue policies or set provider terms.</p>
               </div>
 
               {submitStatus && (
@@ -371,7 +371,7 @@ const ClientLandingPage = () => {
                       placeholder="+18484671057"
                       className="w-full border border-[#E8E5DF] rounded-lg py-3 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#FB923C]/20"
                     />
-                  <p className="text-xs text-[#FB923C] mt-1">✓ USA licensed agents will call you</p>
+                  <p className="text-xs text-[#FB923C] mt-1">A provider or referral partner may contact you.</p>
                 </div>
 
                 <div>
@@ -433,14 +433,17 @@ const ClientLandingPage = () => {
                       Sending Request...
                     </span>
                   ) : (
-                    'Send My Quote Request →'
+                    'Send Request →'
                   )}
                 </button>
 
-                <p className="text-center text-xs text-[#94A3B8]">
-                  🔒 Secure submission — your details are protected with encrypted transport.
-                  <br />A licensed agent will contact you to discuss tailored coverage options.
-                </p>
+                <div className="text-xs text-[#6B7280] leading-relaxed">
+                  <label className="flex items-start gap-2 mb-3">
+                    <input type="checkbox" required className="mt-1" />
+                    <span>I request contact about insurance options at the phone number provided. I understand my request may be shared with third-party providers or referral partners who may contact me. Consent is not a condition of purchase.</span>
+                  </label>
+                  <p>We collect the information on this form along with approximate location and device/browser details to process the request. Providers set their own rates, terms, eligibility, and availability. No quote, savings, coverage, or approval is guaranteed.</p>
+                </div>
               </form>
             </div>
           </div>
@@ -450,23 +453,23 @@ const ClientLandingPage = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-[#475569]">
               <span className="flex items-center gap-1.5">
                 <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
-                🏢 Licensed in all 50 states
+                Independent information resource
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
-                🔒 Secure encrypted intake
+                Provider terms and availability vary
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
-                📞 Fast response from licensed agents
+                No fixed response-time promise
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-1 h-1 bg-[#FB923C] rounded-full"></span>
-                ⭐ Trusted by call centers nationwide
+                No quote or savings guarantee
               </span>
             </div>
             <div className="mt-6 pt-6 border-t border-[#E8E5DF] text-xs text-[#94A3B8]">
-              © 2024 Artist Media. All rights reserved.
+              © 2024 ZarvantaMedia. All rights reserved.
             </div>
           </div>
         </div>
