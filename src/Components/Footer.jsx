@@ -27,7 +27,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const handleGetFreeQuote = () => {
-    navigate('/#guides');
+    navigate('/lead-capture');
   };
 
   const socialLinks = [
@@ -37,7 +37,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', url: '/' },
     { name: 'About Us', url: '/about-us' },
-    { name: 'Insurance Guide', url: '/#guides' },
+    { name: 'Services', url: '/services' },
     { name: 'Contact Us', url: '/contact' },
   ];
 
@@ -58,10 +58,11 @@ const Footer = () => {
           {/* Company Info Column */}
           <div className="space-y-4">
             <h3 className="text-white text-2xl font-black tracking-tight">
-              Zarvanta<span className="text-[#FB923C]">Media</span>
+              Artist<span className="text-[#FB923C]">Media</span>
             </h3>
             <p className="text-sm leading-relaxed text-[#94A3B8] max-w-xs">
-              An independent resource sharing general information about auto insurance coverage and provider options.
+              #1 Media Solution for high-intent traffic, form fills, and call generation. 
+              We deliver results you can count on with surgical precision and strict compliance standards.
             </p>
             <div className="flex space-x-3 pt-2">
               {socialLinks.map((social) => (
@@ -99,7 +100,7 @@ const Footer = () => {
 
           {/* Industries Column */}
           <div>
-              <h4 className="text-white text-lg font-bold mb-4">Insurance Topics</h4>
+            <h4 className="text-white text-lg font-bold mb-4">Auto Insurance</h4>
             <div className="grid grid-cols-1 gap-2">
               {autoInsuranceLinks.map((link) => (
                 <Link key={link.name} to={link.url} className="text-sm text-[#94A3B8] hover:text-[#FB923C] transition-colors duration-300 flex items-center">
@@ -141,7 +142,7 @@ const Footer = () => {
                 onClick={handleGetFreeQuote}
                 className="bg-[#FB923C] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-[#F97316] transition-all duration-300 hover:-translate-y-0.5 shadow-md hover:shadow-lg"
               >
-                Explore the Guide →
+                Get Started Today →
               </button>
             </div>
           </div>
@@ -153,7 +154,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-5">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs text-[#64748B]">
             <p className="text-center md:text-left">
-              &copy; {currentYear} <span className="text-white font-semibold">ZarvantaMedia</span>. All rights reserved.
+              &copy; {currentYear} <span className="text-white font-semibold">Artist Media</span>. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-2 md:mt-0">
               <a href="/privacy-policy" className="hover:text-[#FB923C] transition-colors">Privacy Policy</a>

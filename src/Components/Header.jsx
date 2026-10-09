@@ -46,7 +46,7 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex-shrink-0 group">
               <span className="text-[#1E293B] text-2xl md:text-3xl font-black tracking-tight">
-                Zarvanta<span className="text-[#FB923C] group-hover:text-[#F97316] transition">Media</span>
+                Artist<span className="text-[#FB923C] group-hover:text-[#F97316] transition">Media</span>
               </span>
             </Link>
 
